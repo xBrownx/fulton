@@ -3,14 +3,18 @@ import { Container, StyledLi, StyledUl } from "./styles.jsx";
 import { menuConstants as CONST } from "./constants.jsx";
 import { Heading, Icon, Row } from "../../atoms/index.jsx";
 
-function FeaturesList() {
+function FeaturesList(props) {
     const menu = CONST.menuItems;
+
     return (
         <Container>
             <StyledUl>
                 {menu.map((item) => {
                     return (
-                        <StyledLi key={item.id}>
+                        <StyledLi
+                            key={item.id}
+                            onClick={() => props.setShotChange(item.id)}
+                        >
                             <Row $gap={8}>
                                 <Icon
                                     src={item.icon}
@@ -28,7 +32,10 @@ function FeaturesList() {
                         </StyledLi>
                     );
                 })}
-                <StyledLi $paddingTop={92}>
+                <StyledLi
+                    $paddingTop={92}
+
+                >
                     <Row $gap={8}>
                         <Icon
                             src={CONST.flythrough.icon}

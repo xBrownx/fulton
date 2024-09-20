@@ -8,8 +8,6 @@ import loadingDocks from '../../../assets/SiteFeaturesVideos/Recessed Loading Do
 import nearbyAssets from '../../../assets/SiteFeaturesVideos/Fulton - Surrounding Assets.mp4'
 
 
-
-
 export const designConst = {
     assets: {
         videos: {
