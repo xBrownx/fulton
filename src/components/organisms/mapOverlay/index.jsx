@@ -1,15 +1,29 @@
 import { memo } from 'react';
 import { overlayConst as CONST } from "./overlayConst.jsx";
-import { Container, Modal } from './styles';
+import { BoxDistance, BoxTitle, Container, Modal } from './styles';
 
 function MapOverlay(props) {
-
-    const wh = CONST.westernHighway;
     return (
         <Container {...props}>
-            {/*<Modal ${}>*/}
-            {/*    {wh.title}*/}
-            {/*</Modal>*/}
+            {Object.keys(CONST).map(i => {
+                const item = CONST[i];
+                return (
+                    <Modal
+                        $width={item.box.width}
+                        $height={item.box.height}
+                        $colour={item.colour}
+                        $xPos={item.position.x}
+                        $yPos={item.position.y}
+                    >
+                        <BoxDistance $colour={item.colour}>
+                            {item.distance}
+                        </BoxDistance>
+                        <BoxTitle>
+                            {item.title}
+                        </BoxTitle>
+                    </Modal>
+                );
+            })}
         </Container>
     );
 }

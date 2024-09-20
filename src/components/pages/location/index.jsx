@@ -15,7 +15,7 @@ function Location(props) {
             <BackgroundContainer>
                 <Image {...CONST.assets.backgroundImg} />
             </BackgroundContainer>
-
+            <MapOverlay />
             <Column
                 $height={706}
                 $paddingTop={123}
@@ -46,7 +46,7 @@ function Location(props) {
                                 );
                             })}
                         </Column>
-                        <MapOverlay />
+
 
                     </Column>
                 </Container>
