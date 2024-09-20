@@ -368,16 +368,20 @@ Error generating stack: `+l.message+`
         
         transition: all 200ms ease-in-out;
         color: ${E.colour.primary};
-        
-        
-    `}; 
-    
-    
-    
+    `};
 
-    
-    
-    
+    ${e=>e.$pointerHover&&k`
+        &:hover {
+            cursor: pointer;
+        }
+    `};
+
+
+
+
+
+
+
 `;function kg(e){return x.jsx(Tg,{...e,children:e.children})}const Zt=I.memo(kg),Pg=F.div`
 
     ${e=>e.$width&&k`
@@ -443,8 +447,10 @@ Error generating stack: `+l.message+`
     font-family: 'MaisonNeueExt', serif;
     color: white;
 
+    transition: all 200ms ease-in-out;
     &:hover {
         cursor: pointer;
+        color: ${E.colour.primary};
     }
 `;function Ng(e){return x.jsx(jg,{...e,children:e.children})}const Rg=I.memo(Ng),Ag=F.p`
     padding: 0;
@@ -693,7 +699,7 @@ Error generating stack: `+l.message+`
         opacity: 1;
         font-weight: 600;
     }
-`;function rm(e){const t=e.linkList;return x.jsx(tm,{children:t.map(n=>x.jsx(nm,{children:x.jsx(Rg,{onClick:()=>e.navigateTo(n.id),children:n.label})},n.id))})}const im=I.memo(rm);function lm(e){return x.jsx(em,{$height:70,$width:971,children:x.jsxs(Ye,{$spaceBetween:!0,$paddingLeft:32,$paddingRight:98,children:[x.jsx(Zt,{$fontSize:32,$lineHeight:42.5,$weight:300,$letterSpacing:.02,children:pc.titleTxt}),x.jsx(im,{linkList:pc.links,navigateTo:e.navigateTo})]})})}const om=I.memo(lm),sm="/fulton/assets/Replika's%20Video%20-%20Sep%2019_%202024-BvM7PHFS.mp4",am="/fulton/assets/centuria%20white-C5Ccd2sx.png",hr={titleTxt:`30 Fulton Drive,
+`;function rm(e){const t=e.linkList;return x.jsx(tm,{children:t.map(n=>x.jsx(nm,{children:x.jsx(Rg,{onClick:()=>e.navigateTo(n.id),children:n.label})},n.id))})}const im=I.memo(rm);function lm(e){return x.jsx(em,{$height:70,$width:971,children:x.jsxs(Ye,{$spaceBetween:!0,$paddingLeft:32,$paddingRight:98,children:[x.jsx(Zt,{$fontSize:32,$lineHeight:42.5,$weight:300,$letterSpacing:.02,onClick:()=>e.navigateTo("landing"),$pointerHover:!0,children:pc.titleTxt}),x.jsx(im,{linkList:pc.links,navigateTo:e.navigateTo})]})})}const om=I.memo(lm),sm="/fulton/assets/Replika's%20Video%20-%20Sep%2019_%202024-BvM7PHFS.mp4",am="/fulton/assets/centuria%20white-C5Ccd2sx.png",hr={titleTxt:`30 Fulton Drive,
 Derrimut, 3026 VIC`,assets:{backgroundVideo:sm,logo:{src:am,width:224,height:80}}},um=F.div`
     position: absolute;
     z-index: -1;
