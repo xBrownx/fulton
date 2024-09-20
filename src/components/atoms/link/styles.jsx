@@ -9,7 +9,9 @@ export const StyledLink = styled.a`
     font-family: 'MaisonNeueExt', serif;
     color: white;
 
+    transition: all 200ms ease-in-out;
     &:hover {
         cursor: pointer;
+        color: ${STYLE.colour.primary};
     }
 `

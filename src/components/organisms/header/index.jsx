@@ -11,7 +11,14 @@ function Header(props) {
             $width={971}
         >
             <Row $spaceBetween $paddingLeft={32} $paddingRight={98}>
-                <Heading $fontSize={32} $lineHeight={42.5} $weight={300} $letterSpacing={0.02}>
+                <Heading
+                    $fontSize={32}
+                    $lineHeight={42.5}
+                    $weight={300}
+                    $letterSpacing={0.02}
+                    onClick={() => props.navigateTo("landing")}
+                    $pointerHover
+                >
                     {CONST.titleTxt}
                 </Heading>
                 <NavLinks

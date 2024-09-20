@@ -78,14 +78,18 @@ export const StyledHeading = styled.h1`
         
         transition: all 200ms ease-in-out;
         color: ${S.colour.primary};
-        
-        
-    `}; 
-    
-    
-    
+    `};
 
-    
-    
-    
+    ${props => props.$pointerHover && css`
+        &:hover {
+            cursor: pointer;
+        }
+    `};
+
+
+
+
+
+
+
 `
