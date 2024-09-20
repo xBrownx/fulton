@@ -70,6 +70,20 @@ export const StyledHeading = styled.h1`
         white-space: nowrap;
     `};
     
+    ${props => props.$active && css`
+        color: ${S.colour.primary};
+    `}; 
+    
+    ${props => props.$hoverLink && props.$isHover && css`
+        
+        transition: all 200ms ease-in-out;
+        color: ${S.colour.primary};
+        
+        
+    `}; 
+    
+    
+    
 
     
     
