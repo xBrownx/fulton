@@ -11,6 +11,7 @@ import { CarouselContainer } from "../../organisms/overviewCarousel/styles.jsx";
 function Overview(props) {
     return (
         <Page
+            id={"overview"}
             $bgPrimary
             $fullScreen
             $pageRef={props.$pageRef}
@@ -77,4 +78,4 @@ function Overview(props) {
 }
 
 
-export default memo(Overview);
+export default Overview;

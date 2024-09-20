@@ -6,10 +6,13 @@ import { PageParagraph } from "../../molecules/index.jsx";
 import { Container, RowContainer } from "./styles.jsx";
 import Agent from "../../molecules/agent/index.jsx";
 import EnquireForm from "../../molecules/enquireForm/index.jsx";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Contact(props) {
     return (
+
         <Page
+            id={"contact"}
             $bgPrimary
             $fullScreen
             $pageRef={props.$pageRef}
@@ -89,6 +92,7 @@ function Contact(props) {
                 </Container>
             </Row>
         </Page>
+
     );
 
 }

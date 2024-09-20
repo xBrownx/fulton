@@ -3,6 +3,7 @@ import { Container } from './styles';
 import { header as CONST } from './constants'
 import { Heading, Row } from '../../atoms';
 import NavLinks from "../../molecules/navLinks/index.jsx";
+import { Link } from "react-router-dom";
 
 function Header(props) {
     return (
@@ -11,20 +12,18 @@ function Header(props) {
             $width={971}
         >
             <Row $spaceBetween $paddingLeft={32} $paddingRight={98}>
-                <Heading
-                    $fontSize={32}
-                    $lineHeight={42.5}
-                    $weight={300}
-                    $letterSpacing={0.02}
-                    onClick={() => props.navigateTo("landing")}
-                    $pointerHover
-                >
-                    {CONST.titleTxt}
-                </Heading>
-                <NavLinks
-                    linkList={CONST.links}
-                    navigateTo={props.navigateTo}
-                />
+                <Link to={'/fulton/'} style={{ textDecoration: 'none' }} >
+                    <Heading
+                        $fontSize={32}
+                        $lineHeight={42.5}
+                        $weight={300}
+                        $letterSpacing={0.02}
+                        $pointerHover
+                    >
+                        {CONST.titleTxt}
+                    </Heading>
+                </Link>
+                <NavLinks linkList={CONST.links} />
             </Row>
         </Container>
     );

@@ -4,6 +4,7 @@ import { Page } from '../../templates';
 import { FeaturesList } from "../../organisms/index.jsx";
 import { Column, Video } from "../../atoms/index.jsx";
 import { StyledVideo, VideoContainer } from "./styles.jsx";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Design(props) {
     const videos = CONST.assets.videos;
@@ -33,7 +34,9 @@ function Design(props) {
     }, [currentShot]);
 
     return (
+
         <Page
+            id={"design"}
             $bgPrimary
             $fullScreen
             $pageRef={props.$pageRef}

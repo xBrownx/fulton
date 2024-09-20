@@ -9,6 +9,7 @@ import MapOverlay from "../../organisms/mapOverlay/index.jsx";
 function Location(props) {
     return (
         <Page
+            id={"location"}
             $bgSecondary
             $pageRef={props.$pageRef}
         >
