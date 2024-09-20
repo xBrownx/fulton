@@ -4,6 +4,7 @@ import { Page } from '../../templates';
 import { Column, Image, } from "../../atoms/index.jsx";
 import { PageParagraph, PageSubtitle, PageTitle } from "../../molecules/index.jsx";
 import { BackgroundContainer, Container } from "./styles.jsx";
+import MapOverlay from "../../organisms/mapOverlay/index.jsx";
 
 function Location(props) {
     return (
@@ -45,6 +46,7 @@ function Location(props) {
                                 );
                             })}
                         </Column>
+                        <MapOverlay />
 
                     </Column>
                 </Container>
