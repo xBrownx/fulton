@@ -16,6 +16,7 @@ function FeaturesList(props) {
                             key={item.id}
                             item={item}
                             setShotChange={props.setShotChange}
+                            currentShot={props.currentShot}
                         />
                     );
                 })}
