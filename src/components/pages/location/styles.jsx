@@ -21,9 +21,9 @@ export const BackgroundContainer = styled.div`
 `
 
 export const CustomImage = styled.img`
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    object-position: 0% 60%;
+    object-position: 50% 50%;
 `
 
