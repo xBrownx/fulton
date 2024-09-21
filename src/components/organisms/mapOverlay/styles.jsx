@@ -51,6 +51,8 @@ export const BoxTitle = styled.p`
 
 export const HoverContainer = styled.div`
     position: absolute;
+    background: white;
+    opacity: 0.1;
     width: ${props => S.width(props.$width)}vw;
     height: ${props => S.height(props.$height)}vh;
     margin-left: ${props => S.width(props.$xPos)}vw;

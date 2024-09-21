@@ -7,36 +7,44 @@ import { LogoContainer } from "./styles.jsx";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Landing(props) {
+
+
     return (
 
-                <Page
-                    id={""}
-                    $fullScreen
-                    $pageRef={props.$pageRef}
+        <Page
+            id={""}
+            $fullScreen
+            $bgPrimary
+            $pageRef={props.$pageRef}
+        >
+
+
+                <BackgroundVideo src={CONST.assets.backgroundVideo} />
+                <Column
+                    $centreY
+                    $paddingLeft={56}
+                    $borderBox
+                    $gap={8}
+
                 >
-                    <Column
-                        $centreY
-                        $paddingLeft={56}
-                        $borderBox
-                        $gap={8}
+                    <Image
+                        $width={CONST.assets.logo.width}
+                        $height={CONST.assets.logo.height}
+                        {...CONST.assets.logo}
+                    />
+                    <Heading
+                        $fontSize={96}
+                        $lineHeight={115.2}
+                        $weight={300}
                     >
-                        <Image
-                            $width={CONST.assets.logo.width}
-                            $height={CONST.assets.logo.height}
-                            {...CONST.assets.logo}
-                        />
-                        <Heading
-                            $fontSize={96}
-                            $lineHeight={115.2}
-                            $weight={300}
-                        >
-                            {CONST.titleTxt}
-                        </Heading>
+                        {CONST.titleTxt}
+                    </Heading>
 
-                    </Column>
+                </Column>
 
-                    <BackgroundVideo src={CONST.assets.backgroundVideo} />
-                </Page>
+
+
+        </Page>
 
     );
 }

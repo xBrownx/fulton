@@ -5,39 +5,42 @@ import { BoxDistance, BoxTitle, Container, HoverContainer, Modal } from './style
 function MapOverlay(props) {
     return (
         <Container {...props}>
-            {Object.keys(CONST).map(i => {
-                const item = CONST[i];
-                const [isHover, setHover] = useState(false);
-                return (
-                    <>
-                        <Modal
-                            $width={item.box.width}
-                            $height={item.box.height}
-                            $colour={item.colour}
-                            $xPos={item.position.x}
-                            $yPos={item.position.y}
-                            $hover={isHover}
-                        >
-                            <BoxDistance $colour={item.colour}>
-                                {item.distance}
-                            </BoxDistance>
-                            <BoxTitle>
-                                {item.title}
-                            </BoxTitle>
-                        </Modal>
-                        <HoverContainer
-                            $width={item.hover.width}
-                            $height={item.hover.height}
-                            $xPos={item.hover.x}
-                            $yPos={item.hover.y}
-                            onMouseEnter={() => setHover(true)}
-                            onMouseLeave={() => setHover(false)}
-                        />
-                    </>
-                );
-            })}
+            {Object.keys(CONST).map(item => (<MapItem key={item.id} item={item} />))}
         </Container>
     );
+}
+
+const MapItem = (props) => {
+    const item = CONST[props.item];
+    const [isHover, setHover] = useState(false);
+    return (
+        <>
+            <Modal
+                $width={item.box.width}
+                $height={item.box.height}
+                $colour={item.colour}
+                $xPos={item.position.x}
+                $yPos={item.position.y}
+                $hover={isHover}
+            >
+                <BoxDistance $colour={item.colour}>
+                    {item.distance}
+                </BoxDistance>
+                <BoxTitle>
+                    {item.title}
+                </BoxTitle>
+            </Modal>
+            <HoverContainer
+                $width={item.hover.width}
+                $height={item.hover.height}
+                $xPos={item.hover.x}
+                $yPos={item.hover.y}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+            />
+        </>
+    )
+        ;
 }
 
 

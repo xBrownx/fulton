@@ -1,20 +1,20 @@
 import { memo } from 'react';
 import { location as CONST } from './constants';
 import { Page } from '../../templates';
-import { Column, Image, } from "../../atoms/index.jsx";
+import { Column, } from "../../atoms/index.jsx";
 import { PageParagraph, PageSubtitle, PageTitle } from "../../molecules/index.jsx";
-import { BackgroundContainer, Container } from "./styles.jsx";
+import { BackgroundContainer, Container, CustomImage } from "./styles.jsx";
 import MapOverlay from "../../organisms/mapOverlay/index.jsx";
 
 function Location(props) {
     return (
         <Page
             id={"location"}
-            $bgSecondary
+            $bgPrimary
             $pageRef={props.$pageRef}
         >
             <BackgroundContainer>
-                <Image {...CONST.assets.backgroundImg} />
+                <CustomImage {...CONST.assets.backgroundImg} />
             </BackgroundContainer>
             <MapOverlay />
             <Column

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {Style as STYLE } from '../../util';
 
 export const StyledLink = styled.a`
@@ -14,4 +14,12 @@ export const StyledLink = styled.a`
         cursor: pointer;
         color: ${STYLE.colour.primary};
     }
+    
+    ${props => props.$isActive && css`
+        color: ${STYLE.colour.primary};
+        font-weight: 700;
+        &:hover {
+            cursor: default;
+        }
+    `}
 `

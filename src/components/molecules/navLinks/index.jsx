@@ -1,10 +1,11 @@
 import { memo } from 'react';
 import { StyledUl, StyledLi } from './styles';
 import { Link as StyledLink } from '../../atoms';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavLinks(props) {
     const linkList = props.linkList;
+    const location = useLocation();
 
     return (
         <StyledUl>
@@ -12,9 +13,9 @@ function NavLinks(props) {
                 return (
                     <StyledLi key={link.id}>
                         <Link to={link.path} style={{ textDecoration: 'none' }}>
-                            <p>
+                            <StyledLink $isActive={location.pathname === `/${link.path}`}>
                                 {link.label}
-                            </p>
+                            </StyledLink>
                         </Link>
                     </StyledLi>
                 );

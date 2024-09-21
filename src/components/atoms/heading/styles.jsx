@@ -5,6 +5,7 @@ import {Style as S} from '../../util'
 export const StyledHeading = styled.h1`
     padding: 0;
     margin: 0;
+    z-index: 1;
     color: ${S.colour.neutralLight};
     font-family: 'MaisonNeueExt', serif;
 
