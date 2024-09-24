@@ -17,5 +17,13 @@ export const BackgroundContainer = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
+    
+`
+
+export const CustomImage = styled.img`
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 50% 50%;
 `
 

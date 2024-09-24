@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { Style as S } from '../../util'
 
 export const Container = styled.div`
+    transition: all 200ms ease-in-out;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,6 +48,10 @@ export const Container = styled.div`
         width: fit-content;
     `};
     
+    ${props => props.$fitHeight && css`
+        height: fit-content;
+    `};
+    
     ${props => props.$justifyEnd && css`
         justify-content: end;
     `};
@@ -66,5 +71,4 @@ export const Container = styled.div`
     ${props => props.$spaceBetween && css`
         justify-content: space-between;
     `};
-    
 `

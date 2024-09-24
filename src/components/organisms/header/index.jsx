@@ -1,25 +1,44 @@
 import { memo } from 'react';
-import { Container } from './styles';
+import { Link } from "react-router-dom";
 import { header as CONST } from './constants'
-import { Heading, Row } from '../../atoms';
-import NavLinks from "../../molecules/navLinks/index.jsx";
+import { Container, ImageWrapper, Wrapper } from './styles';
+import { Heading, Image, Row } from '../../atoms';
+import { NavLinks } from "../../molecules";
 
-function Header(props) {
+
+function Header() {
+    const replikaLogo = CONST.assets.replikaLogo
     return (
-        <Container
-            $height={70}
-            $width={971}
-        >
-            <Row $spaceBetween $paddingLeft={32} $paddingRight={98}>
-                <Heading $fontSize={32} $lineHeight={42.5} $weight={300} $letterSpacing={0.02}>
-                    {CONST.titleTxt}
-                </Heading>
-                <NavLinks
-                    linkList={CONST.links}
-                    navigateTo={props.navigateTo}
+
+        <Container>
+            <Wrapper
+                $width={971}
+                $height={70}
+            >
+                <Row $spaceBetween $paddingLeft={32} $paddingRight={98}>
+                    <Link to={'/fulton/'} style={{ textDecoration: 'none' }}>
+                        <Heading
+                            $fontSize={32}
+                            $lineHeight={42.5}
+                            $weight={300}
+                            $letterSpacing={0.02}
+                            $pointerHover
+                        >
+                            {CONST.titleTxt}
+                        </Heading>
+                    </Link>
+                    <NavLinks linkList={CONST.links} />
+                </Row>
+            </Wrapper>
+            <ImageWrapper>
+                <Image
+                    $width={replikaLogo.width}
+                    $height={replikaLogo.height}
+                    {...replikaLogo}
                 />
-            </Row>
+            </ImageWrapper>
         </Container>
+
     );
 }
 

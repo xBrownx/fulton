@@ -1,42 +1,28 @@
 import { memo, useState } from 'react';
-import { Container, StyledLi, StyledUl } from "./styles.jsx";
-import { menuConstants as CONST } from "./constants.jsx";
-import { Heading, Icon, Row } from "../../atoms/index.jsx";
+import { menuConstants as CONST } from "./constants";
+import { Container, StyledLi, StyledUl } from "./styles";
+import { Heading, Image, Row } from "../../atoms";
 
 function FeaturesList(props) {
     const menu = CONST.menuItems;
-
-
+    const [menuHover, setMenuHover] = useState(false);
     return (
-        <Container>
-            <StyledUl>
+        <Container $hover={menuHover}>
+            <StyledUl
+                onMouseEnter={() => setMenuHover(true)}
+                onMouseLeave={() => setMenuHover(false)}
+            >
                 {menu.map((item) => {
                     return (
                         <MenuRow
                             key={item.id}
                             item={item}
                             setShotChange={props.setShotChange}
+                            currentShot={props.currentShot}
+                            menuHover={menuHover}
                         />
                     );
                 })}
-                <StyledLi
-                    $paddingTop={92}
-                >
-                    <Row $gap={8}>
-                        <Icon
-                            src={CONST.flythrough.icon}
-                            $width={32}
-                            $height={32}
-                        />
-                        <Heading
-                            $fontSize={16}
-                            $weight={300}
-                            $lineHeight={19.2}
-                        >
-                            {CONST.flythrough.label}
-                        </Heading>
-                    </Row>
-                </StyledLi>
             </StyledUl>
         </Container>
     );
@@ -50,25 +36,29 @@ const MenuRow = (props) => {
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
         >
+
             <Row $gap={8}>
-                <Icon
-                    src={props.item.icon}
-                    $width={32}
-                    $height={32}
-                    $active={props.currentShot === props.item.id}
-                    $isHover={isHover}
-                    $hoverLink
-                />
-                <Heading
-                    $fontSize={16}
-                    $weight={300}
-                    $lineHeight={19.2}
-                    $active={props.currentShot === props.item.id}
-                    $isHover={isHover}
-                    $hoverLink
-                >
-                    {props.item.label}
-                </Heading>
+                <div>
+                    <Image
+                        src={isHover ? props.item.iconActive : props.item.icon}
+                        $width={32}
+                        $height={32}
+                        $active={props.currentShot === props.item.id}
+                        $isHover={isHover}
+                        $hoverLink
+                    />
+                </div>
+                    <Heading
+                        $fontSize={16}
+                        $weight={300}
+                        $lineHeight={19.2}
+                        $active={props.currentShot === props.item.id}
+                        $isHover={isHover}
+                        $hoverLink
+                        $displayNone={!props.menuHover}
+                    >
+                        {props.item.label}
+                    </Heading>
             </Row>
         </StyledLi>
     );

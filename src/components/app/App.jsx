@@ -6,48 +6,28 @@ import Design from "../pages/design/index.jsx";
 import Contact from "../pages/contact/index.jsx";
 import { useRef } from "react";
 import './app.css'
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 function App() {
-
-    const pageRefs = {
-        landing: useRef(),
-        overview: useRef(),
-        location: useRef(),
-        design: useRef(),
-        contact: useRef(),
-    }
-
-    const navigateTo = (pageId) => {
-
-        setTimeout(() => {
-            pageRefs[pageId].current.scrollIntoView({
-                behavior: "smooth",
-                block: 'start'
-            })
-        }, 100);
-    }
+    const location = useLocation();
 
     return (
-        <div>
-            <Header
-                navigateTo={navigateTo}
-            />
-            <Landing
-                $pageRef={pageRefs.landing}
-                navigateTo={navigateTo}
-            />
-            <Overview
-                $pageRef={pageRefs.overview}
-            />
-            <Location
-                $pageRef={pageRefs.location}
-            />
-            <Design
-                $pageRef={pageRefs.design}
-            />
-            <Contact
-                $pageRef={pageRefs.contact}
-            />
-        </div>
+        <>
+            <Header />
+            <AnimatePresence mode={"wait"}>
+                <Routes location={location} key={location.pathname}>
+                    <Route path="fulton/" element={<Landing />} />
+                    <Route path="fulton/overview" element={<Overview />} />
+                    <Route path="fulton/location" element={<Location />} />
+                    <Route path="fulton/design" element={<Design />} />
+                    <Route path="fulton/contact" element={<Contact />} />
+                </Routes>
+            </AnimatePresence>
+
+        </>
+
+
     )
 }
 

@@ -8,6 +8,7 @@ export const StyledPage = styled.section`
     flex-direction: column;
     min-width: 100vw;
     max-width: 100vw !important;
+    max-height: 100vh !important;
     overflow: hidden;
     height: 100%;
     min-height: 100%;

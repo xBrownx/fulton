@@ -5,6 +5,7 @@ import {Style as S} from '../../util'
 export const StyledHeading = styled.h1`
     padding: 0;
     margin: 0;
+    z-index: 1;
     color: ${S.colour.neutralLight};
     font-family: 'MaisonNeueExt', serif;
 
@@ -78,14 +79,28 @@ export const StyledHeading = styled.h1`
         
         transition: all 200ms ease-in-out;
         color: ${S.colour.primary};
-        
-        
-    `}; 
+    `};
+
+    ${props => props.$pointerHover && css`
+        &:hover {
+            cursor: pointer;
+        }
+    `};
     
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+    transition-delay: 0.15s;
+    ${props => props.$displayNone && css`
+        opacity: 0;
+        transition: none;
+        transition-delay: 0.0s;
+    `};   
     
     
 
     
-    
-    
+
+
+
+
 `

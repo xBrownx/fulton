@@ -5,8 +5,21 @@ export const Container = styled.div`
     z-index: 10;
     position: fixed;
     top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     
-    background-color: #000;
+    ${props => props.$height && css`
+        height: ${S.height(props.$height)}vh;
+    `};
+    
+    
+`
+
+export const Wrapper = styled.div`
+    background-color: #000000CC;
     clip-path: polygon(
             0% 0%, 
             100% 0%, 
@@ -24,4 +37,7 @@ export const Container = styled.div`
     ${props => props.$height && css`
         height: ${S.height(props.$height)}vh;
     `};
+`
+export const ImageWrapper = styled.div`
+    padding-right: ${S.width(32)}vw;
 `

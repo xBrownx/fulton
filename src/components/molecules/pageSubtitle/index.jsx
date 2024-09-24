@@ -6,11 +6,11 @@ function PageSubtitle(props) {
     return (
         <Paragraph
             $paddingBlock={8}
-            $colourPrimary
             $fontSize={16}
             $lineHeight={24}
             $weight={400}
             $gap={16}
+            {...props}
         >
             {props.children}
         </Paragraph>

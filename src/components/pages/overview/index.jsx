@@ -1,27 +1,28 @@
 import { memo } from 'react';
 import { overview as CONST } from './constants';
-import { Column, Heading, Paragraph, Row } from "../../atoms";
+import { Column, Row } from "../../atoms";
 import { Page } from '../../templates';
-import { PageTitle, PageSubtitle, PageParagraph } from "../../molecules/";
-import { ListWrapper, StyledLi, StyledUl } from "./styles";
-import OverviewCarousel from "../../organisms/overviewCarousel/index.jsx";
-import { CarouselContainer } from "../../organisms/overviewCarousel/styles.jsx";
+import { PageTitle, PageSubtitle, PageParagraph, BackgroundVideo } from "../../molecules";
+import { OverviewDetails } from "../../organisms/index.jsx";
 
 
 function Overview(props) {
     return (
         <Page
+            id={"overview"}
             $bgPrimary
             $fullScreen
             $pageRef={props.$pageRef}
         >
+            <BackgroundVideo src={CONST.assets.backgroundVideo.src} />
             <Row
                 $spaceBetween
-                $paddingTop={155}
+                $paddingTop={212}
                 $paddingBottom={82}
+                $paddingRight={32}
                 $alignStart
+                $fitHeight
             >
-
                 <Column
                     $paddingLeft={32}
                     $width={545}
@@ -30,47 +31,28 @@ function Overview(props) {
                     <Column
                         $gap={16}
                     >
-                        <PageTitle>
+                        <PageTitle $colourLight>
                             {CONST.titleTxt}
                         </PageTitle>
-                        <PageSubtitle>
+                        <PageSubtitle $colourLight>
                             {CONST.subtitleTxt}
                         </PageSubtitle>
-                        <PageParagraph>
-                            {CONST.paragraphTxt}
-                        </PageParagraph>
+                        <Column $gap={16}>
+                            {CONST.paragraphTxt.map((paragraph, idx) => {
+                                return (
+                                    <PageParagraph key={idx} $colourLight>
+                                        {paragraph}
+                                    </PageParagraph>
+                                )
+                            })}
+                        </Column>
+
                     </Column>
 
-                    <StyledUl>
-                        {CONST.details.map(item => {
-                            return (
-                                <StyledLi key={item.label}>
-                                    <ListWrapper>
-                                        <Heading
-                                            $colourPrimary
-                                            $fontSize={20}
-                                            $lineHeight={24}
-                                            $weight={300}
-                                        >
-                                            {item.value}
-                                        </Heading>
-                                        <Paragraph
-                                            $colourDark
-                                            $fontSize={12}
-                                            $lineHeight={24}
-                                            $weight={400}
-                                        >
-                                            {item.label}
-                                        </Paragraph>
-                                    </ListWrapper>
-                                </StyledLi>
-                            );
-                        })}
-                    </StyledUl>
+
                 </Column>
-                <CarouselContainer>
-                    <OverviewCarousel />
-                </CarouselContainer>
+                    <OverviewDetails />
+
             </Row>
         </Page>
     );
