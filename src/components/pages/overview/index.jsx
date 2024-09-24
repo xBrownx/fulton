@@ -59,4 +59,4 @@ function Overview(props) {
 }
 
 
-export default memo(Overview);
+export default Overview;
