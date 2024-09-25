@@ -32,12 +32,6 @@ export const menuConstants = {
             iconActive: flythroughActive,
         },
         {
-            id: "nearbyAssets",
-            label: "Nearby Assets",
-            icon: nearbyAssets,
-            iconActive: nearbyAssetsActive,
-        },
-        {
             id: "loadingDocks",
             label: "Loading Docks",
             icon: loadingDocks,
@@ -79,12 +73,6 @@ export const menuConstants = {
             icon: sprinkler,
             iconActive: sprinklerActive,
         },
-        // {
-        //     id: "ridgeHeight",
-        //     label: "Ridge Height",
-        //     icon: ridgeHeight,
-        //     iconActive: ridgeHeightActive,
-        // },
         {
             id: "evCharging",
             label: "EV Charging",
@@ -97,12 +85,6 @@ export const menuConstants = {
             icon: carParking,
             iconActive: carParkingActive,
         },
-
-
-
-
-
-
     ],
 
 }

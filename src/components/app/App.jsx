@@ -16,27 +16,42 @@ import mobileMap from '../../assets/Location-Mobile.png'
 import mobileMapLegend from '../../assets/mobileMapLegend.png'
 import { Image } from "../atoms/index.jsx";
 import Footer from "../organisms/footer/index.jsx";
+import { useRef } from "react";
 
 
 function App() {
     const location = useLocation();
     const isMobile = useMobile();
-
+    const pageRefs = {
+        landing: useRef(),
+        overview: useRef(),
+        location: useRef(),
+        features: useRef(),
+        contact: useRef()
+    }
+    function scrollTo(pageId) {
+        setTimeout(() => {
+            pageRefs[pageId].current.scrollIntoView({
+                behavior: "smooth",
+                block: 'start'
+            })
+        }, 100);
+    }
     return (
         <>
-            {location.pathname !== "/map" && <Header />}
+            {location.pathname !== "/map" && <Header scrollTo={scrollTo}/>}
             {
                 isMobile ?
                     <>
-                        <Landing />
-                        <Overview />
+                        <Landing $pageRef={pageRefs.landing} />
+                        <Overview $pageRef={pageRefs.overview} />
                         <AssetOverview />
-                        <Location />
+                        <Location $pageRef={pageRefs.location} />
                         <Image src={mobileMap} />
                         <Image src={mobileMapLegend} />
-                        <FeaturesMobile />
+                        <FeaturesMobile $pageRef={pageRefs.features} />
                         <Agency />
-                        <Contact />
+                        <Contact $pageRef={pageRefs.contact} />
                         <Footer />
                     </>
                     :

@@ -15,6 +15,7 @@ function Location(props) {
             id={"location"}
             $bgPrimary
             $fullScreen={!isMobile}
+            $pageRef={props.$pageRef}
         >
             {showModal &&
                 <LocationModal

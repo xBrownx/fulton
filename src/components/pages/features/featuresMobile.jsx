@@ -39,6 +39,7 @@ function FeaturesMobile(props) {
             id={"features"}
             $bgSecondary
             $fullScreen={false}
+            $pageRef={props.$pageRef}
         >
             <Column $paddingTop={64} $gap={5}>
                 <Column $paddingInline={16}>

@@ -7,11 +7,16 @@ import { NavLinks } from "../../molecules";
 import { useMobile } from "../../../hooks/useMobile.jsx";
 import Exit from '../../../assets/exit.svg'
 
-function Header() {
+function Header(props) {
     const isMobile = useMobile();
     const [isShowMenu, setIsShowMenu] = useState(false);
     const replikaLogo = CONST.assets.replikaLogo
     const MenuIcon = CONST.assets.menuIcon.src;
+
+    const scrollTo = (page) => {
+        setIsShowMenu(false);
+        props.scrollTo(page)
+    }
 
     return (
         <>
@@ -25,7 +30,7 @@ function Header() {
                         $paddingLeft={isMobile ? 16 : 32}
                         $paddingRight={isMobile ? 16 : 59}
                     >
-                        <Link to={'/'} style={{ textDecoration: 'none' }}>
+                        <Link to={'/'} style={{textDecoration: 'none'}}>
                             <Heading
                                 $fontSize={32}
                                 $lineHeight={42.5}
@@ -45,35 +50,62 @@ function Header() {
 
 
             </Container>
-            {isMobile && isShowMenu && <MobileMenuContainer>
-                <Column
-                    $paddingTop={16}
-                    $gap={32}
-                    $justifyEnd>
+            {isMobile &&
+                <MobileMenuContainer $visible={isShowMenu}>
+                    <Column
+                        $paddingTop={16}
+                        $gap={32}
+                        $justifyEnd
+                    >
 
-                    <Exit
-                        style={{marginRight: "16px"}}
-                        onClick={() => setIsShowMenu(false)}
-                    />
-                    <MobileUl>
-                        <Heading $fontSize={20} $lineHeight={20} $weight={300}>
-                            HOME
-                        </Heading>
-                        <Heading $fontSize={20} $lineHeight={20} $weight={300}>
-                            OVERVIEW
-                        </Heading>
-                        <Heading $fontSize={20} $lineHeight={20} $weight={300}>
-                            LOCATION
-                        </Heading>
-                        <Heading $fontSize={20} $lineHeight={20} $weight={300}>
-                            DESIGN
-                        </Heading>
-                        <Heading $fontSize={20} $lineHeight={20} $weight={300}>
-                            CONTACT
-                        </Heading>
-                    </MobileUl>
-                </Column>
-            </MobileMenuContainer>
+                        <Exit
+                            style={{marginRight: "16px"}}
+                            onClick={() => setIsShowMenu(false)}
+                        />
+                        <MobileUl>
+                            <Heading
+                                $fontSize={20}
+                                $lineHeight={20}
+                                $weight={300}
+                                onClick={() => scrollTo("landing")}
+                            >
+                                HOME
+                            </Heading>
+                            <Heading
+                                $fontSize={20}
+                                $lineHeight={20}
+                                $weight={300}
+                                onClick={() => scrollTo("overview")}
+                            >
+                                OVERVIEW
+                            </Heading>
+                            <Heading
+                                $fontSize={20}
+                                $lineHeight={20}
+                                $weight={300}
+                                onClick={() => scrollTo("location")}
+                            >
+                                LOCATION
+                            </Heading>
+                            <Heading
+                                $fontSize={20}
+                                $lineHeight={20}
+                                $weight={300}
+                                onClick={() => scrollTo("features")}
+                            >
+                                DESIGN
+                            </Heading>
+                            <Heading
+                                $fontSize={20}
+                                $lineHeight={20}
+                                $weight={300}
+                                onClick={() => scrollTo("contact")}
+                            >
+                                CONTACT
+                            </Heading>
+                        </MobileUl>
+                    </Column>
+                </MobileMenuContainer>
             }
         </>
     );

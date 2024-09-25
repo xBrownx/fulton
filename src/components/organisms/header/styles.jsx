@@ -46,6 +46,7 @@ export const Wrapper = styled.div`
     ${Media.md`
         width: 100%;
         clip-path: unset;
+        height: 100%;
     `}
     
 `
@@ -67,13 +68,19 @@ export const IconWrapper = styled.div`
 `
 
 export const MobileMenuContainer = styled.div`
+    transition: all 200ms ease-out;
     background: #000000;
     width: 100%;
-    height: 372px;
+    
     z-index: 10;
     position: fixed;
     display: flex;
     flex-direction: column;
+    height: 0;
+    
+    ${props => props.$visible && css`
+        height: 400px;
+    `};
     
     clip-path: polygon(
             0% 0%, 
@@ -91,6 +98,7 @@ export const MobileUl = styled.ul`
     align-items: end;
     padding-right: 16px;
     gap: 40px;
+    padding-bottom: 32px;
 `
 
 export const MobileLink = styled.div`

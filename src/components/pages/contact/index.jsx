@@ -8,7 +8,7 @@ import EnquireForm from "../../molecules/enquireForm/index.jsx";
 import { OverviewCarousel } from "../../organisms/index.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";
 
-function Contact() {
+function Contact(props) {
     const isMobile = useMobile()
 
     return (
@@ -17,6 +17,7 @@ function Contact() {
             id={"contact"}
             $fullScreen
             $mobile={isMobile}
+            $pageRef={props.$pageRef}
         >
             <Row
                 $paddingTop={isMobile ? 64 : 155}

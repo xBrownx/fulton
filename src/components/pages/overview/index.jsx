@@ -14,6 +14,7 @@ function Overview(props) {
     return (
         <Page
             id={"overview"}
+            $pageRef={props.$pageRef}
             $bgPrimary
             $fullScreen={!isMobile}
             $mobile={isMobile}
