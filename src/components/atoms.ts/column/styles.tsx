@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
-import { Style as S } from '../../util'
+import { Styles as S } from '../../util'
 import { Media } from "../../util/Media.jsx";
+
 
 export const Container = styled.div`
     display: flex;

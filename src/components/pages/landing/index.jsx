@@ -5,7 +5,7 @@ import { ArrowWrapper } from "./styles.jsx";
 import { Column, Heading, Image } from "../../atoms";
 import { BackgroundVideo } from "../../molecules/";
 import { Page } from '../../templates';
-import Button from '../../atoms.ts/button.ts/index'
+import Button from '../../atoms.ts/button/index'
 
 import arrow from '../../../assets/downArrow.png'
 function Landing(props) {
