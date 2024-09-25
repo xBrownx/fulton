@@ -1,4 +1,4 @@
-import backgroundImage from '../../../assets/location/location map update.png'
+
 export const location = {
     titleTxt: "The Location",
     paragraphTxt: [
@@ -10,7 +10,7 @@ export const location = {
     footerTxt: "View live map",
     assets: {
         backgroundImg: {
-            src: backgroundImage
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/Fulton+location+map.png"
         }
     }
 }

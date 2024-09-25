@@ -13,5 +13,3 @@ export const overview = {
         }
     }
 }
-
-//src/assets/overview/Area's Clip.mp4

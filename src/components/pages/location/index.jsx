@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { location as CONST } from './constants';
 import { Page } from '../../templates';
 import { Column, } from "../../atoms/index.jsx";
@@ -7,16 +7,25 @@ import { BackgroundContainer, Container, CustomImage, CustomLink } from "./style
 import MapOverlay from "../../organisms/mapOverlay/index.jsx";
 
 function Location(props) {
+
+    const [loadMiniMap, setLoadMiniMap] = useState(false);
+
     return (
         <Page
             id={"location"}
             $bgPrimary
             $pageRef={props.$pageRef}
         >
-            <BackgroundContainer>
+            {/*{loadMiniMap ?*/}
+            {/*    <iframe src="https://my.atlist.com/map/164fda48-b25a-4046-bd6c-ea74ce9c20fa/?share=true"*/}
+            {/*        allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" loading="lazy"*/}
+            {/*        frameBorder="0" scrolling="no" allowFullScreen id="atlist-embed"></iframe>*/}
+            {/*    :*/}
+                <>
+                <BackgroundContainer>
                 <CustomImage {...CONST.assets.backgroundImg} />
             </BackgroundContainer>
-            <MapOverlay />
+            {/*<MapOverlay />*/}
             <Column
                 $height={706}
                 $paddingTop={123}
@@ -46,7 +55,7 @@ function Location(props) {
                                     </PageParagraph>
                                 );
                             })}
-                            <CustomLink>
+                            <CustomLink onClick={() => setLoadMiniMap(true)}>
                                 {CONST.footerTxt}
                             </CustomLink>
                         </Column>
@@ -55,6 +64,9 @@ function Location(props) {
                     </Column>
                 </Container>
             </Column>
+                </>
+            {/*}*/}
+
 
         </Page>
     );
