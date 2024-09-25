@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { contact as CONST } from './constants';
 import { Page } from '../../templates';
 import { Column, Row } from "../../atoms/index.jsx";
 import { PageTitle } from "../../molecules/index.jsx";
