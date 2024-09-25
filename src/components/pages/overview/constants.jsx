@@ -9,7 +9,7 @@ export const overview = {
     ],
     assets: {
         backgroundVideo: {
-            src: 'https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/240924_Area_s Clip.mp4'
+            src: 'https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/Overview-Background.mp4'
         }
     }
 }
