@@ -5,16 +5,23 @@ import { Column, Icon, Image, } from "../../atoms/index.jsx";
 import { PageParagraph, PageTitle } from "../../molecules/index.jsx";
 import { BackgroundContainer, Container, CustomImage, CustomLink } from "./styles.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";
+import { LocationModal } from "../../organisms/index.jsx";
 
 function Location(props) {
     const isMobile = useMobile();
-
+    const [showModal, setShowModal] = useState(false);
     return (
         <Page
             id={"location"}
             $bgPrimary
             $fullScreen={!isMobile}
         >
+            {showModal &&
+                <LocationModal
+                    closeModal={() => setShowModal(false)}
+                    videoSrc={CONST.assets.nearbyAssets.src}
+                />
+            }
             {!isMobile &&
                 <BackgroundContainer>
                     <CustomImage {...CONST.assets.backgroundImg} />
@@ -58,7 +65,7 @@ function Location(props) {
                                         <Image $width={32} $height={32} src={CONST.assets.mapIcon} />
                                         {CONST.footerTxt[0]}
                                     </CustomLink>
-                                    <CustomLink>
+                                    <CustomLink onClick={() => setShowModal(true)}>
                                         <Image $width={32} $height={32} src={CONST.assets.nearbyIcon} />
                                         {CONST.footerTxt[1]}
                                     </CustomLink>

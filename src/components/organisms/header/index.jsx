@@ -42,13 +42,7 @@ function Header() {
                         </IconWrapper>
                     </Row>
                 </Wrapper>
-                <ImageWrapper>
-                    <Image
-                        $width={replikaLogo.width}
-                        $height={replikaLogo.height}
-                        {...replikaLogo}
-                    />
-                </ImageWrapper>
+
 
             </Container>
             {isMobile && isShowMenu && <MobileMenuContainer>

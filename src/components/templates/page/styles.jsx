@@ -87,6 +87,12 @@ export const StyledPage = styled.section`
         max-height: fit-content;
     `}
     
-    
-
 `
+
+export const PageLogo = styled.div`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+`
+
+
