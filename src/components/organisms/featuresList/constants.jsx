@@ -79,12 +79,12 @@ export const menuConstants = {
             icon: sprinkler,
             iconActive: sprinklerActive,
         },
-        {
-            id: "ridgeHeight",
-            label: "Ridge Height",
-            icon: ridgeHeight,
-            iconActive: ridgeHeightActive,
-        },
+        // {
+        //     id: "ridgeHeight",
+        //     label: "Ridge Height",
+        //     icon: ridgeHeight,
+        //     iconActive: ridgeHeightActive,
+        // },
         {
             id: "evCharging",
             label: "EV Charging",

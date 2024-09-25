@@ -27,14 +27,14 @@ export const designConst = {
                 src: baseURL + "240924_Solar Roof Clip.mp4"
             },
             power: {
-                src: baseURL + "240924_Solar Roof Clip.mp4"
+                src: baseURL + "Power.mp4"
             },
             sprinkler: {
                 src: baseURL + "Sprinkler.mp4"
             },
-            ridgeHeight: {
-
-            },
+            // ridgeHeight: {
+            //
+            // },
             evCharging: {
                 src: baseURL + "240924_EV.mp4"
             },

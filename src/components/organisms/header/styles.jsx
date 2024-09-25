@@ -39,5 +39,5 @@ export const Wrapper = styled.div`
     `};
 `
 export const ImageWrapper = styled.div`
-    padding-right: ${S.width(32)}vw;
+    padding-right: ${S.width(16)}vw;
 `

@@ -4,11 +4,9 @@ import { Page } from '../../templates';
 import { Column, } from "../../atoms/index.jsx";
 import { PageParagraph, PageTitle } from "../../molecules/index.jsx";
 import { BackgroundContainer, Container, CustomImage, CustomLink } from "./styles.jsx";
-import MapOverlay from "../../organisms/mapOverlay/index.jsx";
 
 function Location(props) {
 
-    const [loadMiniMap, setLoadMiniMap] = useState(false);
 
     return (
         <Page
@@ -16,16 +14,9 @@ function Location(props) {
             $bgPrimary
             $pageRef={props.$pageRef}
         >
-            {/*{loadMiniMap ?*/}
-            {/*    <iframe src="https://my.atlist.com/map/164fda48-b25a-4046-bd6c-ea74ce9c20fa/?share=true"*/}
-            {/*        allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" loading="lazy"*/}
-            {/*        frameBorder="0" scrolling="no" allowFullScreen id="atlist-embed"></iframe>*/}
-            {/*    :*/}
-                <>
-                <BackgroundContainer>
+            <BackgroundContainer>
                 <CustomImage {...CONST.assets.backgroundImg} />
             </BackgroundContainer>
-            {/*<MapOverlay />*/}
             <Column
                 $height={706}
                 $paddingTop={123}
@@ -66,10 +57,6 @@ function Location(props) {
                     </Column>
                 </Container>
             </Column>
-                </>
-            {/*}*/}
-
-
         </Page>
     );
 

@@ -37,8 +37,8 @@ export const header = {
     assets: {
         replikaLogo: {
             src: replikaLogo,
-            width: 77.62,
-            height: 32
+            width: 77.62 * 1.5,
+            height: 32 * 1.5
         }
     }
 }
