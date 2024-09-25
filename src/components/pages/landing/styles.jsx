@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 export const LogoContainer = styled.div`
     position: absolute;
     z-index: 2;
@@ -14,4 +15,8 @@ export const ArrowWrapper = styled.div`
     bottom: 0;
     padding-bottom: 32px;
     z-index: 1;
+    display: none;
+    ${Media.md`
+        display: block;
+    `}
 `
