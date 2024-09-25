@@ -65,3 +65,34 @@ export const IconWrapper = styled.div`
         display: flex;
     `}
 `
+
+export const MobileMenuContainer = styled.div`
+    background: #000000;
+    width: 100%;
+    height: 372px;
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    
+    clip-path: polygon(
+            0% 0%, 
+            100% 0%, 
+            100% 100%, 
+            60% 100%, 
+            0% 70%
+    );
+`
+
+export const MobileUl = styled.ul`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding-right: 16px;
+    gap: 40px;
+`
+
+export const MobileLink = styled.div`
+    
+`
