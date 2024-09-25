@@ -2,13 +2,13 @@ const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/"
 export const carouselConst = {
     images: [
         {
-            src: baseURL + 'Exterior 01.png',
+            src: baseURL + 'Exterior 01.jpg',
             role: "presentation",
             width: 800,
             height: 573
         },
         {
-            src: baseURL + 'Exterior 02.png',
+            src: baseURL + 'Exterior 02.jpg',
             role: "presentation",
             width: 800,
             height: 573
