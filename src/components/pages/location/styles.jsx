@@ -38,7 +38,7 @@ export const CustomImage = styled.img`
 `
 
 export const CustomLink = styled.a`
-    transition: 200ms ease-in-out;
+    
     all: unset;
     padding: 0;
     margin: 0;
@@ -56,7 +56,8 @@ export const CustomLink = styled.a`
     
     &:hover {
         cursor: pointer;
-        box-shadow: 0 2px 0 0 ${S.colour.primary};
+        transition: all 200ms ease-in-out;
+        filter: brightness(0.5) saturate(0%);
     }
 `
 

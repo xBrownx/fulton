@@ -55,6 +55,7 @@ function Overview(props) {
                                         key={idx}
                                         $colourLight={!isMobile}
                                         $colourDark={isMobile}
+                                        $opacity={1}
                                     >
                                         {paragraph}
                                     </PageParagraph>

@@ -31,7 +31,7 @@ function Agency() {
                         $borderBox={!isMobile}
                         $fitContent={isMobile}
                     >
-                        <Column $gap={isMobile ? 32 : 16}>
+                        <Column $gap={isMobile ? 32 : 32}>
                             <PageTitle
                                 $colourDark
                                 $fontSize={isMobile ? 36 : 64}

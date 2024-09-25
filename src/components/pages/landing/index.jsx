@@ -4,7 +4,8 @@ import { Column, Heading, Image } from "../../atoms";
 import { BackgroundVideo } from "../../molecules/";
 import { Page } from '../../templates';
 import { useMobile } from "../../../hooks/useMobile.jsx";
-
+import { ArrowWrapper } from "./styles.jsx";
+import arrow from '../../../assets/downArrow.png'
 function Landing(props) {
     const isMobile = useMobile();
 
@@ -18,9 +19,9 @@ function Landing(props) {
         >
             <BackgroundVideo src={CONST.assets.backgroundVideo} />
             <Column
-                $centreY={!isMobile}
+                $centreY
                 $paddingLeft={isMobile ? 16 : 56}
-                $paddingTop={isMobile ? 96 : 0}
+
                 $borderBox
                 $gap={isMobile ? 0 : 8}
             >
@@ -46,7 +47,9 @@ function Landing(props) {
                 </Heading>}
 
             </Column>
-
+            <ArrowWrapper>
+                <Image src={arrow} style={{width: "32px", height: "32px", marginInline: "auto"}}/>
+            </ArrowWrapper>
 
         </Page>
 

@@ -41,7 +41,7 @@ function Location(props) {
                         $paddingLeft={isMobile ? 16 : 32}
                         $paddingRight={isMobile ? 16 : 40}
                         $width={512}
-                        $gap={16}
+                        $gap={isMobile ? 16 : 32}
                     >
                         <PageTitle $colourDark>
                             {CONST.titleTxt}

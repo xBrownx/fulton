@@ -8,7 +8,7 @@ function PageParagraph(props) {
             $fontSize={16}
             $lineHeight={24}
             $weight={400}
-            $opacity={0.8}
+            $opacity={props.$opacity || 0.8}
             {...props}
         >
             {props.children}
