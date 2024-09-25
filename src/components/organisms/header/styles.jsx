@@ -26,10 +26,10 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
     background-color: #000000CC;
     clip-path: polygon(
-            0% 0%, 
+            0% 0%,
             100% 0%, 
-            100% 50%, 
-            95% 100%, 
+            100% calc(100% - ${S.height(35)}vh), 
+            calc(100% - ${S.height(68.691)}vh) 100%, 
             0% 100%
     );
     display: flex;
@@ -86,8 +86,8 @@ export const MobileMenuContainer = styled.div`
             0% 0%, 
             100% 0%, 
             100% 100%, 
-            60% 100%, 
-            0% 70%
+            calc(0% + 196.261px) 100%, 
+            0% calc(100% - 120px)
     );
 `
 

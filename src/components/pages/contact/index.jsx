@@ -26,6 +26,7 @@ function Contact(props) {
                 $mobileFlip
                 $paddingInline={isMobile ? 16 : 0}
                 $borderBox
+                $height={499 }
             >
                 <CarouselContainer>
                     <OverviewCarousel />

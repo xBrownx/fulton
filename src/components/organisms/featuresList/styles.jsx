@@ -9,7 +9,7 @@ export const Container = styled.div`
     clip-path: polygon(
             0% 0%,
             100% 0%,
-            100% 92%,
+            100% calc(100% - ${S.width(33)}vw),
             0% 100%,
             0% 100%
     );
@@ -19,8 +19,8 @@ export const Container = styled.div`
         clip-path: polygon(
                 0% 0%,
                 100% 0%,
-                100% 93%,
-                65% 100%,
+                100% calc(100% - ${S.width(33)}vw),
+                calc(100% - ${S.width(66)}vw) 100%,
                 0% 100%
         );
     `}

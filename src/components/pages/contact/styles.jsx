@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Style as S } from '../../util'
 import { Media } from "../../util/Media.jsx";
 export const RowContainer = styled.div`
@@ -24,14 +24,14 @@ export const Container = styled.div`
 `
 
 export const CarouselContainer = styled.div`
-    width: ${S.width(896)}vw;
+    min-width: ${S.width(896)}vw;
     height: ${S.height(499)}vh;
     
     clip-path: polygon(
                 0% 0%, 
                 100% 0%, 
-                100% 85%, 
-                85% 100%, 
+                100% calc(100% - 4.5vw), 
+                calc(100% - 8.832vw) 100%, 
                 0% 100%,
                 0% 0%
         );

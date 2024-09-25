@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Style as S } from '../../util'
 import { Media } from "../../util/Media.jsx";
 
@@ -11,8 +11,8 @@ export const Container = styled.div`
     clip-path: polygon(
             0% 0%, 
             100% 0%, 
-            100% 82%, 
-            73% 100%, 
+            100% calc(100% - 8vw), 
+            calc(100% - 15.701vw) 100%, 
             0% 100%
     );
 
@@ -34,7 +34,7 @@ export const CustomImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 50%;
+    object-position: 0 50%;
 `
 
 export const CustomLink = styled.a`
@@ -53,7 +53,6 @@ export const CustomLink = styled.a`
     justify-content: center;
     align-items: center;
     width: fit-content;
-    box-shadow: 0 0px 0 0 ${S.colour.primary};
     
     &:hover {
         cursor: pointer;

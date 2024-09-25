@@ -47,23 +47,27 @@ export const MobileContainer = styled.div`
     transition: all 200ms ease-in-out;
     background: #000000CC;
     height: fit-content;
-    //padding: 16px;
+    padding-bottom: 8px;
+    
 `
 
 export const MobileUl = styled.ul`
     transition: all 200ms ease-in-out;
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0 0 0 16px;
+    margin: 0;
     height: fit-content;
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    column-gap: 16px;
     list-style: none;
-    overflow: scroll;
+    overflow: auto;
+    
+    
     
     &::-webkit-scrollbar {
-        width: 0;
+        display: none;
     }
+    
     
 `
 

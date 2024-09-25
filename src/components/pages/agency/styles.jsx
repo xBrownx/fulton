@@ -25,8 +25,8 @@ export const Container = styled.div`
                 100% 0%, 
                 100% 100%, 
                 0% 100%, 
-                0% 15%,
-                49% 0%
+                0% calc(0% + 8.5vw),
+                calc(0% + 16.682vw) 0%
         );
     
 
