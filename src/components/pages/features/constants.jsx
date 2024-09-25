@@ -1,6 +1,6 @@
 
 
-const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/"
+const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/"
 
 export const designConst = {
     assets: {

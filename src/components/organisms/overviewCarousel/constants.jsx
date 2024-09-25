@@ -1,37 +1,32 @@
-import car01 from '../../../assets/overview/carousel/Exterior 01.png';
-import car02 from '../../../assets/overview/carousel/Exterior 02.png';
-import car03 from '../../../assets/overview/carousel/Exterior 03.png';
-import car04 from '../../../assets/overview/carousel/Exterior 04.png';
-import car05 from '../../../assets/overview/carousel/Exterior 05.png';
-
+const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/"
 export const carouselConst = {
     images: [
         {
-            src: car01,
+            src: baseURL + 'Exterior 01.png',
             role: "presentation",
             width: 800,
             height: 573
         },
         {
-            src: car02,
+            src: baseURL + 'Exterior 02.png',
             role: "presentation",
             width: 800,
             height: 573
         },
         {
-            src: car03,
+            src: baseURL + 'Exterior 03.png',
             role: "presentation",
             width: 800,
             height: 573
         },
         {
-            src: car04,
+            src: baseURL + 'Exterior 04.png',
             role: "presentation",
             width: 800,
             height: 573
         },
         {
-            src: car05,
+            src: baseURL + 'Exterior 05.png',
             role: "presentation",
             width: 800,
             height: 573
