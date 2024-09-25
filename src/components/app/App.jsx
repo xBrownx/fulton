@@ -10,12 +10,12 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Map from "../pages/map/index.jsx";
 
+
 function App() {
     const location = useLocation();
-
     return (
         <>
-            <Header />
+        {location.pathname !== "/map" && <Header /> }
             <AnimatePresence mode={"wait"}>
                 <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Landing />} />
@@ -27,7 +27,6 @@ function App() {
                     <Route path="/map" element={<Map />} />
                 </Routes>
             </AnimatePresence>
-
         </>
 
 
