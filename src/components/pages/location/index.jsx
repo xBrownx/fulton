@@ -55,7 +55,9 @@ function Location(props) {
                                     </PageParagraph>
                                 );
                             })}
-                            <CustomLink onClick={() => setLoadMiniMap(true)}>
+                            <CustomLink
+                                href="/fulton/map" target="_blank"
+                            >
                                 {CONST.footerTxt}
                             </CustomLink>
                         </Column>

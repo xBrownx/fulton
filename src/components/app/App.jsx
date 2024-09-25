@@ -8,6 +8,7 @@ import Contact from "../pages/contact";
 import './app.css'
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import Map from "../pages/map/index.jsx";
 
 function App() {
     const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
                     <Route path="fulton/features" element={<Design />} />
                     <Route path="fulton/agency" element={<Agency />} />
                     <Route path="fulton/contact" element={<Contact />} />
+                    <Route path="fulton/map" element={<Map />} />
                 </Routes>
             </AnimatePresence>
 
