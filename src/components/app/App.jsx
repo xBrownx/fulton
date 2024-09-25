@@ -18,13 +18,13 @@ function App() {
             <Header />
             <AnimatePresence mode={"wait"}>
                 <Routes location={location} key={location.pathname}>
-                    <Route path="fulton/" element={<Landing />} />
-                    <Route path="fulton/overview" element={<Overview />} />
-                    <Route path="fulton/location" element={<Location />} />
-                    <Route path="fulton/features" element={<Design />} />
-                    <Route path="fulton/agency" element={<Agency />} />
-                    <Route path="fulton/contact" element={<Contact />} />
-                    <Route path="fulton/map" element={<Map />} />
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/overview" element={<Overview />} />
+                    <Route path="/location" element={<Location />} />
+                    <Route path="/features" element={<Design />} />
+                    <Route path="/agency" element={<Agency />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/map" element={<Map />} />
                 </Routes>
             </AnimatePresence>
 

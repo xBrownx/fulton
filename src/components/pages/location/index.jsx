@@ -56,7 +56,7 @@ function Location(props) {
                                 );
                             })}
                             <CustomLink
-                                href="/fulton/map" target="_blank"
+                                href="/map" target="_blank"
                             >
                                 {CONST.footerTxt}
                             </CustomLink>

@@ -7,6 +7,7 @@ import agentFour from '../../../assets/agentPhotos/Colliers/Hugh Gildbert.png'
 import agentFive from '../../../assets/agentPhotos/Colliers/Charlie Woodley.png'
 import agentSix from '../../../assets/agentPhotos/Colliers/Nick Saunders.png'
 import centuriaLogo from '../../../assets/centuria white.png'
+
 export const contact = {
     titleTxt: "Agency",
     subtitleTxt: "Please contact an agent from CRBE or Colliers for\nfurther information.",
