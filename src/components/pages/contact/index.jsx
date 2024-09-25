@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { contact as CONST } from './constants';
 import { Page } from '../../templates';
 import { Column, Row } from "../../atoms/index.jsx";
-import { PageParagraph, PageTitle } from "../../molecules/index.jsx";
+import { PageTitle } from "../../molecules/index.jsx";
 import { CarouselContainer, } from "./styles.jsx";
 import EnquireForm from "../../molecules/enquireForm/index.jsx";
 import { OverviewCarousel } from "../../organisms/index.jsx";
