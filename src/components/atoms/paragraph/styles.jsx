@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import {Style as S} from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const StyledParagraph = styled.p`
     padding: 0;
@@ -18,6 +19,9 @@ export const StyledParagraph = styled.p`
     
     ${props => props.$fontSize && css`
         font-size: ${S.fontSize(props.$fontSize)}vw;
+        ${Media.md`
+            font-size: ${props.$fontSize}px;
+        `}
     `};
     
     ${props => props.$weight && css`
@@ -26,6 +30,9 @@ export const StyledParagraph = styled.p`
     
     ${props => props.$lineHeight && css`
         line-height: ${S.height(props.$lineHeight)}vh;
+        ${Media.md`
+            line-height: ${props.$lineHeight}px;
+        `}
     `};
     
     ${props => props.$letterSpacing && css`

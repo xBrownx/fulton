@@ -8,7 +8,7 @@ export const StyledPage = styled.section`
     flex-direction: column;
     min-width: 100vw;
     max-width: 100vw !important;
-    max-height: 100vh !important;
+    max-height: 100vh;
     overflow: hidden;
     height: 100%;
     min-height: 100%;
@@ -31,7 +31,7 @@ export const StyledPage = styled.section`
     `};
 
     ${props => props.$bgSecondary && css`
-        background-color: grey;
+        background-color: black;
     `};
 
     ${props => props.$xStart && css`
@@ -81,6 +81,11 @@ export const StyledPage = styled.section`
     ${props => props.$paddingLeft && css`
         padding-left: ${S.width(props.$paddingLeft)}vw;
     `};
+    
+    ${props => props.$mobile && css`
+        height: fit-content;
+        max-height: fit-content;
+    `}
     
     
 

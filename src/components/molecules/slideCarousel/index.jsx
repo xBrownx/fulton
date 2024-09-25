@@ -5,9 +5,11 @@ import { Navigation, Pagination } from "swiper/modules";
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { useMobile } from "../../../hooks/useMobile.jsx";
 
 export const SlideCarousel = memo(
     function SlideCarousel({images, rounded}) {
+        const isMobile = useMobile();
         return (
             <Styled.Container>
                 <Swiper
@@ -16,7 +18,7 @@ export const SlideCarousel = memo(
                     slidesPerView={1}
                     navigation
                     loop={true}
-                    pagination={{clickable: true}}
+                    pagination={isMobile ? false : {clickable: true}}
                     centeredSlides={true}
                     style={{
                         "--swiper-pagination-color": "#FFF",

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const Container = styled.div`
     z-index: 10;
@@ -14,6 +15,10 @@ export const Container = styled.div`
     ${props => props.$height && css`
         height: ${S.height(props.$height)}vh;
     `};
+    
+    ${Media.md`
+        height: 64px
+    `}
     
     
 `
@@ -37,7 +42,26 @@ export const Wrapper = styled.div`
     ${props => props.$height && css`
         height: ${S.height(props.$height)}vh;
     `};
+    
+    ${Media.md`
+        width: 100%;
+        clip-path: unset;
+    `}
+    
 `
 export const ImageWrapper = styled.div`
     padding-right: ${S.width(16)}vw;
+    
+    ${Media.md`
+        display: none;
+    `}
+`
+
+export const IconWrapper = styled.div`
+    display: none;
+    width: 32px;
+    height: 32px;
+    ${Media.md`
+        display: flex;
+    `}
 `

@@ -1,5 +1,5 @@
 import replikaLogo from '../../../assets/Replika.png'
-
+import MenuIcon from '../../../assets/MenuIcon.svg';
 export const header = {
     titleTxt: "30 Fulton Drive",
     links: [
@@ -39,6 +39,9 @@ export const header = {
             src: replikaLogo,
             width: 77.62 * 1.5,
             height: 32 * 1.5
+        },
+        menuIcon: {
+            src: MenuIcon,
         }
     }
 }

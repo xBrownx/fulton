@@ -2,11 +2,12 @@ import { memo, useEffect, useRef, useState } from 'react';
 import { designConst as CONST } from './constants';
 import { Page } from '../../templates';
 import { FeaturesList } from "../../organisms/index.jsx";
-import { Column, Video } from "../../atoms/index.jsx";
-import { StyledVideo, VideoContainer } from "./styles.jsx";
-import { AnimatePresence, motion } from "framer-motion";
+import { Column } from "../../atoms/index.jsx";
+import { StyledVideoMobile, VideoContainerMobile } from "./styles.jsx";
+import { PageTitle } from "../../molecules/index.jsx";
+import FeaturesListMobile from "../../organisms/featuresListMobile/index.jsx";
 
-function Features(props) {
+function FeaturesMobile(props) {
     const videos = CONST.assets.videos;
     const [currentShot, setCurrentShot] = useState(0);
     const [videoSrc, setVideoSrc] = useState(videos['flythrough'].src);
@@ -14,7 +15,7 @@ function Features(props) {
     const videoRef = useRef(null);
 
     const setShotChange = (shot) => {
-        videoRef.current.scrollIntoView({ behavior: "smooth" });
+
         if (currentShot !== shot) {
             console.log("currentShot: ", currentShot, "shot: ", shot);
             setCurrentShot(shot);
@@ -34,21 +35,21 @@ function Features(props) {
     }, [currentShot]);
 
     return (
-
         <Page
             id={"features"}
-            $bgPrimary
-            $fullScreen
-            $pageRef={props.$pageRef}
+            $bgSecondary
+            $fullScreen={false}
         >
-            <VideoContainer
-                $isLoading={isLoading}
-            >
-                <StyledVideo src={videoSrc} ref={videoRef} muted controls={false} {...props}>
-                </StyledVideo>
-            </VideoContainer>
-            <Column $paddingTop={113}>
-                <FeaturesList
+            <Column $paddingTop={64} $gap={5}>
+                <Column $paddingInline={16}>
+                    <PageTitle >
+                        Site Features
+                    </PageTitle>
+                </Column>
+                <VideoContainerMobile $isLoading={isLoading}>
+                    <StyledVideoMobile src={videoSrc} ref={videoRef} muted controls={false} {...props} />
+                </VideoContainerMobile>
+                <FeaturesListMobile
                     setShotChange={setShotChange}
                     currentShot={currentShot}
                 />
@@ -58,4 +59,4 @@ function Features(props) {
 
 }
 
-export default memo(Features);
+export default memo(FeaturesMobile);

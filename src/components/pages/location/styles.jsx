@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const Container = styled.div`
     z-index: 0;
@@ -14,6 +15,12 @@ export const Container = styled.div`
             73% 100%, 
             0% 100%
     );
+
+    ${Media.md`
+        width: 100%;
+        clip-path: unset;
+        
+    `}
 `
 
 export const BackgroundContainer = styled.div`

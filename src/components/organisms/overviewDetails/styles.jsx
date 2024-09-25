@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const Container = styled.div`
     position: absolute;
@@ -9,6 +10,11 @@ export const Container = styled.div`
     top: 0;
     padding-top: ${S.height(212)}vh;
     padding-bottom: ${S.height(82)}vh;
+    
+    ${Media.md`
+        padding-top: 0;
+        padding-bottom: 0;
+    `}
 `
 
 
@@ -19,6 +25,11 @@ export const StyledUl = styled.ul`
     margin: 0;
     padding: 0;
     height: 100%;
+    ${Media.md`
+        gap: 32px;
+        padding-right: 16px;
+        padding-top: 64px;
+    `}
 `
 
 export const StyledLi = styled.li`
@@ -26,6 +37,10 @@ export const StyledLi = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    ${Media.md`
+        height: fit-content;
+    `}
 `
 
 export const ListWrapper = styled.div`
@@ -35,4 +50,10 @@ export const ListWrapper = styled.div`
     height: ${S.height(48)}vh;
     border-left: 4px solid white;
     padding-left: ${S.width(16)}vw;
+    
+    ${Media.md`
+        width: 100%;
+        height: 48px;
+        padding-left: 16px;
+    `}
 `

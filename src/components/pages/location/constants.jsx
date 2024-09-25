@@ -11,6 +11,7 @@ export const location = {
     assets: {
         backgroundImg: {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/Fulton+location+map.png"
-        }
+        },
+
     }
 }

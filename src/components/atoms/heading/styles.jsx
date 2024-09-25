@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import {Style as S} from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 
 export const StyledHeading = styled.h1`
@@ -98,7 +99,10 @@ export const StyledHeading = styled.h1`
     
     
 
-    
+    ${Media.md`
+        font-size: ${props => props.$fontSize}px;
+        line-height: ${props => props.$lineHeight}px;
+    `}
 
 
 

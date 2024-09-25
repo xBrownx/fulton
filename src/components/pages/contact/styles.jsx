@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 export const RowContainer = styled.div`
     border-left: ${S.width(4)}vw solid ${S.colour.primary};
     padding-left: ${S.width(8)}vw;
@@ -34,4 +35,10 @@ export const CarouselContainer = styled.div`
                 0% 100%,
                 0% 0%
         );
+    
+    ${Media.md`
+        width: 100%;
+        height: 259px;
+
+    `}
 `

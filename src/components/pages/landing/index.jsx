@@ -3,8 +3,10 @@ import { landing as CONST } from './constants';
 import { Column, Heading, Image } from "../../atoms";
 import { BackgroundVideo } from "../../molecules/";
 import { Page } from '../../templates';
-function Landing(props) {
+import { useMobile } from "../../../hooks/useMobile.jsx";
 
+function Landing(props) {
+    const isMobile = useMobile();
 
     return (
 
@@ -14,31 +16,36 @@ function Landing(props) {
             $bgPrimary
             $pageRef={props.$pageRef}
         >
-
-
-                <BackgroundVideo src={CONST.assets.backgroundVideo} />
-                <Column
-                    $centreY
-                    $paddingLeft={56}
-                    $borderBox
-                    $gap={8}
-
+            <BackgroundVideo src={CONST.assets.backgroundVideo} />
+            <Column
+                $centreY={!isMobile}
+                $paddingLeft={isMobile ? 16 : 56}
+                $paddingTop={isMobile ? 96 : 0}
+                $borderBox
+                $gap={isMobile ? 0 : 8}
+            >
+                <Image
+                    $width={isMobile ? 89.6 : CONST.assets.logo.width}
+                    $height={isMobile ? 32 : CONST.assets.logo.height}
+                    {...CONST.assets.logo}
+                />
+                <Heading
+                    $fontSize={isMobile ? 48 : 96}
+                    $lineHeight={isMobile ? 48 : 115.2}
+                    $weight={300}
                 >
-                    <Image
-                        $width={CONST.assets.logo.width}
-                        $height={CONST.assets.logo.height}
-                        {...CONST.assets.logo}
-                    />
+                    {isMobile ? CONST.titleTxtMobile : CONST.titleTxt}
+                </Heading>
+                {isMobile &&
                     <Heading
-                        $fontSize={96}
-                        $lineHeight={115.2}
+                        $fontSize={32}
+                        $lineHeight={48}
                         $weight={300}
                     >
-                        {CONST.titleTxt}
-                    </Heading>
+                        {CONST.subtitleTxtMobile}
+                </Heading>}
 
-                </Column>
-
+            </Column>
 
 
         </Page>

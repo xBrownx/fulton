@@ -1,11 +1,16 @@
 import styled, { css } from 'styled-components';
 import { Style as S } from '../../util'
+import { Media } from "../../util/Media.jsx";
 
 export const StyledUl = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: row;
     gap: ${S.width(16)}vw;
+    
+    ${Media.md`
+        display: none;
+    `}
 `
 
 export const StyledLi = styled.li`

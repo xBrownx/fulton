@@ -1,46 +1,60 @@
 import { memo, useEffect, useState } from 'react';
 import { overview as CONST } from './constants';
-import { Column, Row } from "../../atoms";
+import { Column, Row, Image } from "../../atoms";
 import { Page } from '../../templates';
 import { PageTitle, PageSubtitle, PageParagraph, BackgroundVideo } from "../../molecules";
 import { OverviewDetails } from "../../organisms/index.jsx";
+import { useMobile } from "../../../hooks/useMobile.jsx";
+import AssetOverview from "../../organisms/assetOverview/index.jsx";
 
 
 function Overview(props) {
+    const isMobile = useMobile();
+
     return (
         <Page
             id={"overview"}
             $bgPrimary
-            $fullScreen
-            $pageRef={props.$pageRef}
+            $fullScreen={!isMobile}
+            $mobile={isMobile}
         >
-            <BackgroundVideo src={CONST.assets.backgroundVideo.src} />
+            {!isMobile && <BackgroundVideo src={CONST.assets.backgroundVideo.src} />}
             <Row
                 $spaceBetween
-                $paddingTop={212}
-                $paddingBottom={82}
-                $paddingRight={32}
+                $paddingTop={isMobile ? 64 : 212}
+                $paddingBottom={isMobile ? 64 : 82}
+                $paddingRight={isMobile ? 16 : 32}
                 $alignStart
                 $fitHeight
             >
                 <Column
-                    $paddingLeft={32}
+                    $paddingLeft={isMobile ? 16 : 32}
                     $width={545}
-                    $gap={40}
+                    $gap={isMobile ? 16 : 40}
                 >
                     <Column
                         $gap={16}
                     >
-                        <PageTitle $colourLight>
+                        <PageTitle
+                            $colourLight={!isMobile}
+                            $colourDark={isMobile}
+                        >
                             {CONST.titleTxt}
                         </PageTitle>
-                        <PageSubtitle $colourLight>
+                        <PageSubtitle
+                            $colourLight={!isMobile}
+                            $colourPrimary={isMobile}
+                        >
                             {CONST.subtitleTxt}
                         </PageSubtitle>
                         <Column $gap={16}>
                             {CONST.paragraphTxt.map((paragraph, idx) => {
                                 return (
-                                    <PageParagraph key={idx} $colourLight>
+                                    <PageParagraph
+                                        key={idx}
+                                        $colourLight={!isMobile}
+                                        $colourDark={isMobile}
+                                    >
                                         {paragraph}
                                     </PageParagraph>
                                 )
@@ -48,10 +62,11 @@ function Overview(props) {
                         </Column>
 
                     </Column>
-                </Column>
-                <OverviewDetails />
 
+                </Column>
+                {!isMobile && <OverviewDetails />}
             </Row>
+
         </Page>
     );
 }

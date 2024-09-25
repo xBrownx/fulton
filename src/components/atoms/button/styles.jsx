@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import { Style as S } from "../../util";
+import { Media } from "../../util/Media.jsx";
 
 
 export const StyledButton = styled.button`
@@ -134,6 +135,13 @@ export const StyledButton = styled.button`
     ${props => props.$paddingLeft && css`
         padding-left: ${S.width(props.$paddingLeft)}vw;
     `};
+    
+    ${Media.md`
+       font-size: 16px;
+       height: 40px;
+       line-height: 16.48px;
+       font-weight: 400
+    `}
 
 `
 
