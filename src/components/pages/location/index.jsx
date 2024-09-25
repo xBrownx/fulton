@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import { location as CONST } from './constants';
 import { Page } from '../../templates';
-import { Column, Image, } from "../../atoms/index.jsx";
+import { Column, Icon, Image, } from "../../atoms/index.jsx";
 import { PageParagraph, PageTitle } from "../../molecules/index.jsx";
 import { BackgroundContainer, Container, CustomImage, CustomLink } from "./styles.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";
@@ -50,11 +50,19 @@ function Location(props) {
                                     </PageParagraph>
                                 );
                             })}
-                            {!isMobile && <CustomLink
-                                href="/fulton/#/map" target="_blank"
-                            >
-                                {CONST.footerTxt}
-                            </CustomLink>
+                            {!isMobile &&
+                                <Column $paddingTop={16} $gap={32}>
+                                    <CustomLink
+                                        href="/fulton/#/map" target="_blank"
+                                    >
+                                        <Image $width={32} $height={32} src={CONST.assets.mapIcon} />
+                                        {CONST.footerTxt[0]}
+                                    </CustomLink>
+                                    <CustomLink>
+                                        <Image $width={32} $height={32} src={CONST.assets.nearbyIcon} />
+                                        {CONST.footerTxt[1]}
+                                    </CustomLink>
+                                </Column>
                             }
                         </Column>
                     </Column>
@@ -62,7 +70,8 @@ function Location(props) {
 
             </Column>
         </Page>
-    );
+    )
+        ;
 
 }
 

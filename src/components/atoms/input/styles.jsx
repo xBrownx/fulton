@@ -10,7 +10,7 @@ export const StyledInput = styled.input`
     box-sizing: border-box;
     border: 1px solid white;
     padding: 0 0 0 20px;
-    font-size: ${S.fontSize(20)}vw;
+    font-size: ${S.fontSize(16)}vw;
     font-family: 'Questrial', serif;
     &::placeholder {
         color: rgba(255, 255, 255, 0.5);;

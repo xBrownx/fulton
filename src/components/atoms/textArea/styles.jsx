@@ -13,7 +13,7 @@ export const StyledTextArea = styled.textarea`
     
     resize: none;
     
-    font-size: ${S.fontSize(20)}vw;
+    font-size: ${S.fontSize(16)}vw;
     font-family: 'Questrial', serif;
     &::placeholder {
         color: rgba(255, 255, 255, 0.5);;

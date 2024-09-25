@@ -13,16 +13,16 @@ function OverviewDetails() {
                             <ListWrapper>
                                 <Heading
                                     $colourLight
-                                    $fontSize={20}
-                                    $lineHeight={24}
+                                    $fontSize={30}
+                                    $lineHeight={30}
                                     $weight={300}
                                 >
                                     {item.value}
                                 </Heading>
                                 <Paragraph
                                     $colourLight
-                                    $fontSize={12}
-                                    $lineHeight={24}
+                                    $fontSize={18}
+                                    $lineHeight={36}
                                     $weight={400}
                                 >
                                     {item.label}

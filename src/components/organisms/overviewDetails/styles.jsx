@@ -10,6 +10,7 @@ export const Container = styled.div`
     top: 0;
     padding-top: ${S.height(212)}vh;
     padding-bottom: ${S.height(82)}vh;
+    padding-right: ${S.width(32)}vw;
     
     ${Media.md`
         padding-top: 0;
@@ -46,7 +47,7 @@ export const StyledLi = styled.li`
 export const ListWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: ${S.width(134)}vw;
+    width: ${S.width(170)}vw;
     height: ${S.height(48)}vh;
     border-left: 4px solid white;
     padding-left: ${S.width(16)}vw;

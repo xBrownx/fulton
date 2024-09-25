@@ -8,9 +8,6 @@ export const designConst = {
             flythrough: {
                 src: baseURL + "Flythrough.mp4"
             },
-            nearbyAssets: {
-                src: baseURL + "240924_Area_s Clip.mp4"
-            },
             loadingDocks: {
                 src: baseURL + "240924_RecessedDocks.mp4"
             },

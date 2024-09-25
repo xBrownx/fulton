@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 function Features(props) {
     const videos = CONST.assets.videos;
-    const [currentShot, setCurrentShot] = useState(0);
+    const [currentShot, setCurrentShot] = useState('flythrough');
     const [videoSrc, setVideoSrc] = useState(videos['flythrough'].src);
     const [isLoading, setIsLoading] = useState(false);
     const videoRef = useRef(null);
@@ -30,6 +30,9 @@ function Features(props) {
         console.log("useEffect triggered")
 
         setIsLoading(false);
+        setTimeout(function () {
+                videoRef.current.play();
+            }, 500)
 
     }, [currentShot]);
 

@@ -1,7 +1,5 @@
 import flythrough from '../../../assets/features/icons/flythrough.png';
 import flythroughActive from '../../../assets/features/icons/flythroughActive.png';
-import nearbyAssets from '../../../assets/features/icons/nearbyAssets.png';
-import nearbyAssetsActive from '../../../assets/features/icons/nearbyAssetsActive.png';
 import loadingDocks from '../../../assets/features/icons/loadingDocks.png';
 import loadingDocksActive from '../../../assets/features/icons/loadingDocksActive.png';
 import rollerDoors from '../../../assets/features/icons/rollerDoors.png';
@@ -30,12 +28,6 @@ export const menuConstants = {
             label: "Flythrough",
             icon: flythrough,
             iconActive: flythroughActive,
-        },
-        {
-            id: "nearbyAssets",
-            label: "Nearby Assets",
-            icon: nearbyAssets,
-            iconActive: nearbyAssetsActive,
         },
         {
             id: "loadingDocks",

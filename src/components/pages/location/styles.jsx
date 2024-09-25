@@ -38,6 +38,7 @@ export const CustomImage = styled.img`
 `
 
 export const CustomLink = styled.a`
+    transition: 200ms ease-in-out;
     all: unset;
     padding: 0;
     margin: 0;
@@ -46,11 +47,17 @@ export const CustomLink = styled.a`
     font-family: 'Questrial', serif;
     font-size: ${S.fontSize(16)}vw;
     line-height: ${S.height(24)}vh;
-    border-bottom: 2px solid ${S.colour.primary};
+    display: flex;
+    flex-direction: row;
+    gap: ${S.width(8)}vw;
+    justify-content: center;
+    align-items: center;
     width: fit-content;
+    box-shadow: 0 0px 0 0 ${S.colour.primary};
     
     &:hover {
         cursor: pointer;
+        box-shadow: 0 2px 0 0 ${S.colour.primary};
     }
 `
 
