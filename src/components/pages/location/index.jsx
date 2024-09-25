@@ -1,7 +1,7 @@
-import { memo, useState } from 'react';
+import { memo } from 'react';
 import { location as CONST } from './constants';
 import { Page } from '../../templates';
-import { Column, Icon, Image, } from "../../atoms/index.jsx";
+import { Column, Image, } from "../../atoms/index.jsx";
 import { PageParagraph, PageTitle } from "../../molecules/index.jsx";
 import { BackgroundContainer, Container, CustomImage, CustomLink } from "./styles.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";

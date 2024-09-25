@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "watch": true,
+    "lib": [
+            "es5", "es6", "dom", "dom.iterable"
+        ],
+    "jsx": "react",
+    "moduleResolution":"node"
+  }
+}

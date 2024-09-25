@@ -1,10 +1,12 @@
 import { memo } from 'react';
 import { landing as CONST } from './constants';
+import { useMobile } from "../../../hooks/useMobile.jsx";
+import { ArrowWrapper } from "./styles.jsx";
 import { Column, Heading, Image } from "../../atoms";
 import { BackgroundVideo } from "../../molecules/";
 import { Page } from '../../templates';
-import { useMobile } from "../../../hooks/useMobile.jsx";
-import { ArrowWrapper } from "./styles.jsx";
+import Button from '../../atoms.ts/button.ts/index'
+
 import arrow from '../../../assets/downArrow.png'
 function Landing(props) {
     const isMobile = useMobile();
@@ -18,6 +20,7 @@ function Landing(props) {
             $pageRef={props.$pageRef}
         >
             <BackgroundVideo src={CONST.assets.backgroundVideo} />
+            <Button />
             <Column
                 $centreY
                 $paddingLeft={isMobile ? 16 : 56}
