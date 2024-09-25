@@ -23,6 +23,7 @@ function Agent(props) {
                         $fontSize={14}
                         $lineHeight={24}
                         $weight={400}
+                        $opacity={0.6}
                     >
                         {phone}
                     </Paragraph>

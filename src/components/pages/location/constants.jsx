@@ -1,13 +1,13 @@
-import backgroundImage from '../../../assets/map.png'
+import backgroundImage from '../../../assets/location/location map update.png'
 export const location = {
     titleTxt: "The Location",
-    subtitleTxt: "Positioned on the western corner of two B-double approved roads, Fulton Drive and Briggs Drive. The facility provides immediate access to major arterials such as the Western Highway, Western Ring Road and the West Gate Freeway.",
     paragraphTxt: [
+        "Positioned on the western corner of two B-double approved roads, Fulton Drive and Briggs Drive. The facility provides immediate access to major arterials such as the Western Highway, Western Ring Road and the West Gate Freeway.",
         "Derrimut’s central location ensures occupiers are within close proximity to the Port of Melbourne, Melbourne Airport, as well as the Melbourne CBD.",
         "It has excellent surrounding road infrastructure that caters to all forms of vehicle transport, including heavy vehicles.",
         "Melbourne’s west is home to some of the largest manufacturers in the world, including OI Glass, VISY, Opal Packaging, and Encore Tissues. More specifically, Derrimut accommodates companies such as Cimpress, Downer Group, and ARA Group."
         ],
-    nearbyItems: {},
+    footerTxt: "View live map",
     assets: {
         backgroundImg: {
             src: backgroundImage

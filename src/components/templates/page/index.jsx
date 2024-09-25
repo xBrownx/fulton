@@ -4,39 +4,30 @@ import { motion } from 'framer-motion';
 import { useLocation } from "react-router-dom";
 
 function Page(props) {
-    const [isVisible, setIsVisible] = useState(false);
-    const location = useLocation();
-
-    // useEffect(() => {
-    //     console.log(location.pathname);
-    //     setIsVisible(location.pathname === `/fulton/${props.id}`);
+    // const routeTransition = {
+    //     hide: {
+    //         x: "-100vw"
+    //     },
     //
-    // }, [location.pathname]);
-
-    const routeTransition = {
-        hide: {
-            x: "-100vw"
-        },
-
-        animate: {
-            x: 0,
-            transition: {
-                delay: 0.2,
-                duration: 0.7,
-                staggerChildren: 0,
-                type: "ease"
-            }
-        },
-
-        exit: {
-            x: "-100vw",
-            transition: {
-                duration: 0.7,
-                delay: 0.5,
-                type: "ease"
-            }
-        }
-    };
+    //     animate: {
+    //         x: 0,
+    //         transition: {
+    //             delay: 0.2,
+    //             duration: 0.7,
+    //             staggerChildren: 0,
+    //             type: "ease"
+    //         }
+    //     },
+    //
+    //     exit: {
+    //         x: "-100vw",
+    //         transition: {
+    //             duration: 0.7,
+    //             delay: 0.5,
+    //             type: "ease"
+    //         }
+    //     }
+    // };
 
     const fadeTransition = {
         hide: {
@@ -46,7 +37,7 @@ function Page(props) {
         animate: {
             opacity: 1,
             transition: {
-                delay: 1,
+                delay: 0,
                 duration: 0.7,
                 type: "ease"
             }
@@ -66,13 +57,13 @@ function Page(props) {
     return (
 
 
-        <motion.div
-            id={`motion-wipe-${props.id}`}
-            key={props.id}
-            variants={routeTransition}
-            initial="hide"
-            animate="animate"
-            exit="exit">
+        // <motion.div
+        //     id={`motion-wipe-${props.id}`}
+        //     key={props.id}
+        //     variants={routeTransition}
+        //     initial="hide"
+        //     animate="animate"
+        //     exit="exit">
             <StyledPage ref={props.$pageRef} {...props}>
                 <motion.div
                     id={`motion-fade-${props.id}`}
@@ -87,7 +78,7 @@ function Page(props) {
                 </motion.div>
             </StyledPage>
 
-        </motion.div>
+        // </motion.div>
 
     )
         ;

@@ -5,14 +5,14 @@ import { Container, ListWrapper, StyledLi, StyledUl } from "./styles";
 
 function OverviewDetails() {
     return (
-
+        <Container>
             <StyledUl>
                 {CONST.details.map(item => {
                     return (
                         <StyledLi key={item.label}>
                             <ListWrapper>
                                 <Heading
-                                    $colourPrimary
+                                    $colourLight
                                     $fontSize={20}
                                     $lineHeight={24}
                                     $weight={300}
@@ -20,7 +20,7 @@ function OverviewDetails() {
                                     {item.value}
                                 </Heading>
                                 <Paragraph
-                                    $colourDark
+                                    $colourLight
                                     $fontSize={12}
                                     $lineHeight={24}
                                     $weight={400}
@@ -32,6 +32,7 @@ function OverviewDetails() {
                     );
                 })}
             </StyledUl>
+        </Container>
     );
 }
 

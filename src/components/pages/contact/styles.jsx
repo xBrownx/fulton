@@ -21,3 +21,17 @@ export const Container = styled.div`
                 20% 0%
         );
 `
+
+export const CarouselContainer = styled.div`
+    width: ${S.width(896)}vw;
+    height: ${S.height(499)}vh;
+    
+    clip-path: polygon(
+                0% 0%, 
+                100% 0%, 
+                100% 85%, 
+                85% 100%, 
+                0% 100%,
+                0% 0%
+        );
+`

@@ -15,7 +15,7 @@ function Header() {
                 $width={971}
                 $height={70}
             >
-                <Row $spaceBetween $paddingLeft={32} $paddingRight={98}>
+                <Row $spaceBetween $paddingLeft={32} $paddingRight={59}>
                     <Link to={'/fulton/'} style={{ textDecoration: 'none' }}>
                         <Heading
                             $fontSize={32}

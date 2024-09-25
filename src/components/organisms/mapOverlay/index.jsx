@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
-import { overlayConst as CONST } from "./overlayConst.jsx";
-import { BoxDistance, BoxTitle, Container, HoverContainer, Modal } from './styles';
+import { overlayConst as CONST } from "./constants.jsx";
+import { BoxDistance, BoxTitle, Container, HoverContainer, Modal, VerticalBoxLine } from './styles';
 
 function MapOverlay(props) {
     return (
@@ -22,6 +22,7 @@ const MapItem = (props) => {
                 $xPos={item.position.x}
                 $yPos={item.position.y}
                 $hover={isHover}
+                $yOffset={item.position.yOffset}
             >
                 <BoxDistance $colour={item.colour}>
                     {item.distance}
@@ -30,6 +31,16 @@ const MapItem = (props) => {
                     {item.title}
                 </BoxTitle>
             </Modal>
+            <VerticalBoxLine
+                $width={item.box.width}
+                $height={item.box.height}
+                $colour={item.colour}
+                $xPos={item.position.x}
+                $yPos={item.position.y}
+                $hover={isHover}
+                $position={item.linePosition}
+                $yOffset={item.position.yOffset}
+            />
             <HoverContainer
                 $width={item.hover.width}
                 $height={item.hover.height}
@@ -37,7 +48,9 @@ const MapItem = (props) => {
                 $yPos={item.hover.y}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
+                $yOffset={item.position.yOffset}
             />
+
         </>
     )
         ;

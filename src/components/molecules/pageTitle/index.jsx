@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Heading } from "../../atoms/index.jsx";
+import { Heading } from "../../atoms";
 
 function PageTitle(props) {
     return (

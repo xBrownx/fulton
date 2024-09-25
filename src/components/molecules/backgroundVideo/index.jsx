@@ -1,4 +1,4 @@
-import { useEffect, useRef, memo } from "react";
+import { useEffect, useRef, memo, useState } from "react";
 import { Container, StyledVideo } from "./styles";
 
 export function BackgroundVideo(props) {
@@ -24,11 +24,23 @@ export function BackgroundVideo(props) {
     //     // observer.observe(videoRef.current);
     // });
 
+
+    const [isLoading, setIsLoading] = useState(false);
+
     return (
         <Container>
-            <StyledVideo autoPlay loop muted controls={false} ref={videoRef}>
+            {isLoading && <div>LOADING</div>}
+            <StyledVideo
+                autoPlay
+                loop
+                muted
+                controls={false}
+                ref={videoRef}
+                onCanPlayThrough={() => setIsLoading(false)}
+            >
                 <source src={props.src} type="video/mp4" />
             </StyledVideo>
+
         </Container>
     );
 }

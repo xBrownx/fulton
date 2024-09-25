@@ -1,14 +1,17 @@
 import styled, { css } from 'styled-components';
+import { Style as S } from '../../util'
 
 export const Container = styled.div`
+    z-index: 0;
     display: flex;
     height: 100%;
     background: white;
+    width: ${S.width(584)}vw;
     clip-path: polygon(
             0% 0%, 
             100% 0%, 
-            100% 84%, 
-            75% 100%, 
+            100% 82%, 
+            73% 100%, 
             0% 100%
     );
 `
@@ -21,9 +24,26 @@ export const BackgroundContainer = styled.div`
 `
 
 export const CustomImage = styled.img`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: 50% 50%;
+    object-position: 0% 50%;
+`
+
+export const CustomLink = styled.a`
+    all: unset;
+    padding: 0;
+    margin: 0;
+    color: ${S.colour.primary};
+    white-space: pre-wrap;
+    font-family: 'Questrial', serif;
+    font-size: ${S.fontSize(16)}vw;
+    line-height: ${S.height(24)}vh;
+    border-bottom: 2px solid ${S.colour.primary};
+    width: fit-content;
+    
+    &:hover {
+        cursor: pointer;
+    }
 `
 

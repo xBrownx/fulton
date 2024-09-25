@@ -16,9 +16,15 @@ export const header = {
             isButton: false,
         },
         {
-            id: "design",
-            path: 'fulton/design',
+            id: "features",
+            path: 'fulton/features',
             label: "Features",
+            isButton: false,
+        },
+        {
+            id: "agency",
+            path: 'fulton/agency',
+            label: "Agency",
             isButton: false,
         },
         {

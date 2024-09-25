@@ -40,7 +40,7 @@ const MenuRow = (props) => {
             <Row $gap={8}>
                 <div>
                     <Image
-                        src={isHover ? props.item.iconActive : props.item.icon}
+                        src={isHover || props.currentShot === props.item.id ? props.item.iconActive : props.item.icon}
                         $width={32}
                         $height={32}
                         $active={props.currentShot === props.item.id}

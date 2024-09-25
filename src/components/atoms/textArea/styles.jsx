@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Style as S } from '../../util'
 
 export const StyledTextArea = styled.textarea`
-    height: ${S.height(109)}vh;
+    height: ${S.height(153)}vh;
     width: 100%;
     background-color: transparent;
     color: white;

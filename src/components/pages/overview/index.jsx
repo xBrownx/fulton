@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { overview as CONST } from './constants';
 import { Column, Row } from "../../atoms";
 import { Page } from '../../templates';
@@ -48,10 +48,8 @@ function Overview(props) {
                         </Column>
 
                     </Column>
-
-
                 </Column>
-                    <OverviewDetails />
+                <OverviewDetails />
 
             </Row>
         </Page>

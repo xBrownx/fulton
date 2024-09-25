@@ -1,4 +1,4 @@
-import backgroundVideo from ""
+
 export const overview = {
     titleTxt: "Asset Overview",
     subtitleTxt: "Power, Position and Proven",
@@ -9,7 +9,7 @@ export const overview = {
     ],
     assets: {
         backgroundVideo: {
-            src: backgroundVideo
+            src: 'https://fulton-assets.s3.ap-southeast-2.amazonaws.com/240924_Area_s Clip.mp4'
         }
     }
 }

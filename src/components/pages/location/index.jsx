@@ -3,7 +3,7 @@ import { location as CONST } from './constants';
 import { Page } from '../../templates';
 import { Column, } from "../../atoms/index.jsx";
 import { PageParagraph, PageSubtitle, PageTitle } from "../../molecules/index.jsx";
-import { BackgroundContainer, Container, CustomImage } from "./styles.jsx";
+import { BackgroundContainer, Container, CustomImage, CustomLink } from "./styles.jsx";
 import MapOverlay from "../../organisms/mapOverlay/index.jsx";
 
 function Location(props) {
@@ -21,7 +21,6 @@ function Location(props) {
                 $height={706}
                 $paddingTop={123}
                 $fitContent
-                $width={584}
             >
                 <Container>
                     <Column
@@ -32,20 +31,24 @@ function Location(props) {
                         $gap={16}
 
                     >
-                        <PageTitle>
+                        <PageTitle $colourDark>
                             {CONST.titleTxt}
                         </PageTitle>
-                        <PageSubtitle>
-                            {CONST.subtitleTxt}
-                        </PageSubtitle>
                         <Column $gap={16}>
                             {CONST.paragraphTxt.map(item => {
                                 return (
-                                    <PageParagraph key={item}>
+                                    <PageParagraph
+                                        key={item}
+                                        $colourDark
+                                        $opacity={0.6}
+                                    >
                                         {item}
                                     </PageParagraph>
                                 );
                             })}
+                            <CustomLink>
+                                {CONST.footerTxt}
+                            </CustomLink>
                         </Column>
 
 
