@@ -61,7 +61,7 @@ function Location(props) {
                             {!isMobile &&
                                 <Column $paddingTop={16} $gap={32}>
                                     <CustomLink
-                                        href="/fulton/#/map" target="_blank"
+                                        href="/#/map" target="_blank"
                                     >
                                         <Image $width={32} $height={32} src={CONST.assets.mapIcon} />
                                         {CONST.footerTxt[0]}
