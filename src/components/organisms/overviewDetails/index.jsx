@@ -2,8 +2,10 @@ import { memo } from 'react';
 import { detailsConst as CONST } from "./constants";
 import { Heading, Paragraph } from "../../atoms/";
 import { Container, ListWrapper, StyledLi, StyledUl } from "./styles";
+import { useMobile } from "../../../hooks/useMobile.jsx";
 
 function OverviewDetails() {
+    const isMobile = useMobile();
     return (
         <Container>
             <StyledUl>
@@ -13,16 +15,16 @@ function OverviewDetails() {
                             <ListWrapper>
                                 <Heading
                                     $colourLight
-                                    $fontSize={30}
-                                    $lineHeight={30}
+                                    $fontSize={isMobile ? 24 : 30}
+                                    $lineHeight={isMobile ? 27 : 30}
                                     $weight={300}
                                 >
                                     {item.value}
                                 </Heading>
                                 <Paragraph
                                     $colourLight
-                                    $fontSize={18}
-                                    $lineHeight={36}
+                                    $fontSize={isMobile ? 16: 18}
+                                    $lineHeight={isMobile ? 16 : 36}
                                     $weight={400}
                                 >
                                     {item.label}

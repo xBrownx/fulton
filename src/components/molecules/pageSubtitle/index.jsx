@@ -8,7 +8,7 @@ function PageSubtitle(props) {
     return (
         <Paragraph
             $paddingBlock={8}
-            $fontSize={isMobile ? 24 : 16}
+            $fontSize={24}
             $lineHeight={24}
             $weight={400}
             $gap={16}

@@ -6,6 +6,7 @@ export const StyledUl = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: row;
+    width: ${S.width(416)}vw;
     gap: ${S.width(16)}vw;
     
     ${Media.md`

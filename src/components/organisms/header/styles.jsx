@@ -34,14 +34,9 @@ export const Wrapper = styled.div`
     );
     display: flex;
     align-items: center;
+    width: ${S.width(971)}vw;
+    height: ${S.height(70)}vh;
     
-    ${props => props.$width && css`
-        width: ${S.width(props.$width)}vw;
-    `};
-    
-    ${props => props.$height && css`
-        height: ${S.height(props.$height)}vh;
-    `};
     
     ${Media.md`
         width: 100%;

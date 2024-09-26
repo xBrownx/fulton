@@ -15,6 +15,8 @@ export const Container = styled.div`
     ${Media.md`
         padding-top: 0;
         padding-bottom: 0;
+        padding-left: 16px;
+        position: relative
     `}
 `
 
@@ -25,7 +27,7 @@ export const StyledUl = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: ${S.height(368)}vh;
     ${Media.md`
         gap: 32px;
         padding-right: 16px;
@@ -49,12 +51,13 @@ export const ListWrapper = styled.div`
     flex-direction: column;
     width: ${S.width(170)}vw;
     height: ${S.height(48)}vh;
-    border-left: 4px solid white;
+    border-left: 2px solid white;
     padding-left: ${S.width(16)}vw;
     
     ${Media.md`
         width: 100%;
         height: 48px;
         padding-left: 16px;
+        padding-top: 0;
     `}
 `

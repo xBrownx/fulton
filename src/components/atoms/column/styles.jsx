@@ -100,6 +100,10 @@ export const Container = styled.div`
     ${props => props.$fitContent && css`
         width: fit-content;
     `}
+
+    ${props => props.$fillParent && css`
+        height: 100%;
+    `}
     
     ${props => props.$borderBox && css`
         box-sizing: border-box;

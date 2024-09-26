@@ -1,17 +1,17 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { Container } from './styles';
 import { overview as CONST } from "../../pages/overview/constants.jsx";
 import { Image } from "../../atoms/index.jsx";
 import { OverviewDetails } from "../index.jsx";
+import { BackgroundVideo } from "../../molecules/index.jsx";
 
 
 function AssetOverview(props) {
     return (
         <Container {...props}>
-            <div style={{ position: "absolute", width: "100%", height: "100%" }}>
-                <OverviewDetails />
-            </div>
-            <Image src={CONST.assets.backgroundImgMobile.src} />
+            <BackgroundVideo src={CONST.assets.backgroundVideo.src} />
+
+            <OverviewDetails />
 
         </Container>
     );

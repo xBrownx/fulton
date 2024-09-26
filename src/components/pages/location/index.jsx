@@ -61,11 +61,11 @@ function Location(props) {
                             {!isMobile &&
                                 <Column $paddingTop={16} $gap={32}>
                                     <CustomLink href="/#/map">
-                                        <Image $width={32} $height={32} src={CONST.assets.mapIcon} />
+                                        <Image $width={32} $height={32} src={CONST.assets.mapIcon.src} />
                                         {CONST.footerTxt[0]}
                                     </CustomLink>
                                     <CustomLink onClick={() => setShowModal(true)}>
-                                        <Image $width={32} $height={32} src={CONST.assets.nearbyIcon} />
+                                        <Image $width={32} $height={32} src={CONST.assets.nearbyIcon.src} />
                                         {CONST.footerTxt[1]}
                                     </CustomLink>
                                 </Column>

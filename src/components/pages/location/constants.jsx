@@ -16,8 +16,12 @@ export const location = {
         nearbyAssets: {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-nearbyassets.mp4"
         },
-        mapIcon: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-map.png",
-        nearbyIcon: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-nearby-assets-active.png",
+        mapIcon: {
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-map.svg"
+        },
+        nearbyIcon: {
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-nearby-assets-active.png"
+        },
 
     }
 }

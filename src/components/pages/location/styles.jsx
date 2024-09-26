@@ -59,5 +59,11 @@ export const CustomLink = styled.a`
         transition: all 200ms ease-in-out;
         filter: brightness(0.5) saturate(0%);
     }
+
+    ${Media.md`
+        font-size: 24px;
+        line-height: 24px;
+        gap: 8px;
+    `}
 `
 

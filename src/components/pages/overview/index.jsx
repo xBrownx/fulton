@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { overview as CONST } from './constants';
 import { Column, Row, Image } from "../../atoms";
 import { Page } from '../../templates';
@@ -6,6 +6,8 @@ import { PageTitle, PageSubtitle, PageParagraph, BackgroundVideo } from "../../m
 import { OverviewDetails } from "../../organisms/index.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";
 import AssetOverview from "../../organisms/assetOverview/index.jsx";
+import { CustomContainer, CustomWrapper } from "./styles.jsx";
+import { CustomLink } from "../location/styles.jsx";
 
 
 function Overview(props) {
@@ -15,60 +17,66 @@ function Overview(props) {
         <Page
             id={"overview"}
             $pageRef={props.$pageRef}
-            $bgPrimary
+            $bgPrimary={!isMobile}
             $fullScreen={!isMobile}
             $mobile={isMobile}
         >
             {!isMobile && <BackgroundVideo src={CONST.assets.backgroundVideo.src} />}
             <Row
                 $spaceBetween
-                $paddingTop={isMobile ? 64 : 212}
+                $paddingTop={isMobile ? 64 : 123}
                 $paddingBottom={isMobile ? 64 : 82}
                 $paddingRight={isMobile ? 16 : 32}
                 $alignStart
                 $fitHeight
             >
-                <Column
-                    $paddingLeft={isMobile ? 16 : 32}
-                    $width={545}
-                    $gap={isMobile ? 16 : 40}
-                >
+                <CustomContainer>
                     <Column
-                        $gap={16}
+                        $paddingTop={isMobile ? 0 : 70}
+                        $paddingLeft={isMobile ? 16 : 32}
+                        $width={545}
+                        $gap={isMobile ? 16 : 40}
+                        $fillParent
                     >
-                        <PageTitle
-                            $colourLight={!isMobile}
-                            $colourDark={isMobile}
+                        <Column
+                            $gap={16}
                         >
-                            {CONST.titleTxt}
-                        </PageTitle>
-                        <PageSubtitle
-                            $colourLight={!isMobile}
-                            $colourPrimary={isMobile}
-                        >
-                            {CONST.subtitleTxt}
-                        </PageSubtitle>
-                        <Column $gap={16}>
-                            {CONST.paragraphTxt.map((paragraph, idx) => {
-                                return (
-                                    <PageParagraph
-                                        key={idx}
-                                        $colourLight={!isMobile}
-                                        $colourDark={isMobile}
-                                        $opacity={1}
-                                    >
-                                        {paragraph}
-                                    </PageParagraph>
-                                )
-                            })}
+                            <PageTitle
+                                $colourLight
+                            >
+                                {CONST.titleTxt}
+                            </PageTitle>
+                            <PageSubtitle
+                                $colourLight
+                            >
+                                {CONST.subtitleTxt}
+                            </PageSubtitle>
+                            <CustomWrapper>
+                                <Column $gap={16}>
+                                <Column $gap={16}>
+                                    {CONST.paragraphTxt.map((paragraph, idx) => {
+                                        return (
+                                            <PageParagraph
+                                                key={idx}
+                                                $colourLight
+                                                $opacity={0.8}
+                                            >
+                                                {paragraph}
+                                            </PageParagraph>
+                                        )
+                                    })}
+                                </Column>
+                                <CustomLink href="/#/map">
+                                    <Image $width={32} $height={32} src={CONST.assets.downloadIcon.src} />
+                                    {CONST.linkTxt}
+                                </CustomLink>
+                                </Column>
+                            </CustomWrapper>
                         </Column>
-
                     </Column>
-
-                </Column>
+                </CustomContainer>
                 {!isMobile && <OverviewDetails />}
             </Row>
-
         </Page>
     );
 }

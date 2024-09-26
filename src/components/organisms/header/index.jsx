@@ -20,10 +20,7 @@ function Header(props) {
     return (
         <>
             <Container>
-                <Wrapper
-                    $width={971}
-                    $height={70}
-                >
+                <Wrapper>
                     <Row
                         $spaceBetween
                         $paddingLeft={isMobile ? 16 : 32}
