@@ -11,13 +11,13 @@ export const location = {
     footerTxt: ["VIEW LIVE MAP", "VIEW NEARBY ASSETS"],
     assets: {
         backgroundImg: {
-            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/Fulton+location+map.png"
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/desktop-map.png"
         },
         nearbyAssets: {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-nearbyassets.mp4"
         },
         mapIcon: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-map.png",
-        nearbyIcon: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-nearby-assets.png",
+        nearbyIcon: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-nearby-assets-active.png",
 
     }
 }

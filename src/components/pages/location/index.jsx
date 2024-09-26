@@ -25,7 +25,7 @@ function Location(props) {
             }
             {!isMobile &&
                 <BackgroundContainer>
-                    <CustomImage {...CONST.assets.backgroundImg.src} />
+                    <CustomImage src={CONST.assets.backgroundImg.src} {...CONST.assets.backgroundImg} />
                 </BackgroundContainer>
             }
             <Column
