@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build && cp CNAME dist/",
+    "predeploy": "npm run build --cname 30fultondrive.com",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
