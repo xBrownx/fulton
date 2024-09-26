@@ -1,12 +1,12 @@
-import cbreLogo from '../../../assets/agentPhotos/CBRE/cbre-logo-305x210.png'
+import cbreLogo from '../../../assets/agentPhotos/CBRE/cbre-logo-light.png'
 import agentOne from '../../../assets/agentPhotos/CBRE/Fergus Pragnell.png'
 import agentTwo from '../../../assets/agentPhotos/CBRE/Tom Murphy.png'
 import agentThree from '../../../assets/agentPhotos/CBRE/Harry Kalaitzis.jpg'
-import colliersLogo from '../../../assets/agentPhotos/Colliers/Colliers_CMYK_one_color_logos-black.png'
-import agentFour from '../../../assets/agentPhotos/Colliers/Hugh Gildbert.png'
-import agentFive from '../../../assets/agentPhotos/Colliers/Charlie Woodley.png'
-import agentSix from '../../../assets/agentPhotos/Colliers/Nick Saunders.png'
-import centuriaLogo from '../../../assets/CENT002-Centuria-Black.png'
+import colliersLogo from '../../../assets/agentPhotos/Colliers/colliers-logo-dark.png'
+import agentFour from '../../../assets/agentPhotos/Colliers/hugh-gilbert.png'
+import agentFive from '../../../assets/agentPhotos/Colliers/charlie-woodley.png'
+import agentSix from '../../../assets/agentPhotos/Colliers/nick-saunders.png'
+
 export const contact = {
     titleTxt: "Get in Touch",
     subtitleTxt: "Please contact an agent from CRBE or Colliers for\nfurther information.",

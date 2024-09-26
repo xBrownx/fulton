@@ -1,12 +1,4 @@
-import cbreLogo from '../../../assets/agentPhotos/CBRE/cbre-logo-305x210.png'
-import agentOne from '../../../assets/agentPhotos/CBRE/Fergus Pragnell.png'
-import agentTwo from '../../../assets/agentPhotos/CBRE/Tom Murphy.png'
-import agentThree from '../../../assets/agentPhotos/CBRE/Harry Kalaitzis.jpg'
-import colliersLogo from '../../../assets/agentPhotos/Colliers/Colliers_CMYK_one_color_logos-black.png'
-import agentFour from '../../../assets/agentPhotos/Colliers/Hugh Gildbert.png'
-import agentFive from '../../../assets/agentPhotos/Colliers/Charlie Woodley.png'
-import agentSix from '../../../assets/agentPhotos/Colliers/Nick Saunders.png'
-import centuriaLogo from '../../../assets/centuria white.png'
+const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/agency/"
 
 export const contact = {
     titleTxt: "Agency",
@@ -17,17 +9,17 @@ export const contact = {
                 {
                     name: "Furgus Pragnell",
                     mobile: "0410 681 492",
-                    photo: agentOne
+                    photo: baseURL + "fergus-pragnell.png"
                 },
                 {
                     name: "Tom Murphy",
                     mobile: "0434 414 901",
-                    photo: agentTwo
+                    photo: baseURL + "tom-murphy.png"
                 },
                 {
                     name: "Harry Kalaitzis",
                     mobile: "0409 994 419",
-                    photo: agentThree
+                    photo: baseURL + "harry-kalaitzis.jpg"
                 },
             ]
         },
@@ -36,17 +28,17 @@ export const contact = {
                 {
                     name: "Hugh Gilbert",
                     mobile: "0409 730 858",
-                    photo: agentFour
+                    photo: baseURL + "hugh-gilbert.png"
                 },
                 {
                     name: "Charlie Woodley",
                     mobile: "0419 981 492",
-                    photo: agentFive
+                    photo: baseURL + "charlie-woodley.png"
                 },
                 {
                     name: "Nick Saunders",
                     mobile: "0407 542 210",
-                    photo: agentSix
+                    photo: baseURL + "nick-saunders.png"
                 },
             ]
         }
@@ -80,17 +72,17 @@ export const contact = {
 
     assets: {
         cbreLogo: {
-            src: cbreLogo,
+            src: baseURL + "cbre-logo-dark.png",
             width: 80,
             height: 44,
         },
         colliersLogo: {
-            src: colliersLogo,
+            src: baseURL + "colliers-logo-dark.png",
             width: 80,
             height: 50,
         },
         centuriaLogo: {
-            src: centuriaLogo,
+            src: baseURL + "centuria-logo-light.png",
             width: 146,
             height: 31,
         }

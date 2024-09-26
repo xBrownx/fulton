@@ -1,5 +1,5 @@
 
-import logo from '../../../assets/centuria white.png'
+import logo from '../../../assets/centuria-logo-white.png'
 export const landing = {
     titleTxt: "30 Fulton Drive,\nDerrimut, 3026 VIC",
     titleTxtMobile: "30 Fulton Drive",

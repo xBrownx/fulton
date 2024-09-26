@@ -1,100 +1,67 @@
-import flythrough from '../../../assets/features/icons/flythrough.png';
-import flythroughActive from '../../../assets/features/icons/flythroughActive.png';
-import loadingDocks from '../../../assets/features/icons/loadingDocks.png';
-import loadingDocksActive from '../../../assets/features/icons/loadingDocksActive.png';
-import rollerDoors from '../../../assets/features/icons/rollerDoors.png';
-import rollerDoorsActive from '../../../assets/features/icons/rollerDoorsActive.png';
-import superCanopy from '../../../assets/features/icons/superCanopy.png'
-import superCanopyActive from '../../../assets/features/icons/superCanopyActive.png'
-import warehouses from '../../../assets/features/icons/warehouses.png';
-import warehousesActive from '../../../assets/features/icons/warehousesActive.png';
-import solarPanels from '../../../assets/features/icons/solar.png';
-import solarPanelsActive from '../../../assets/features/icons/solarActive.png';
-import power from '../../../assets/features/icons/power.png'
-import powerActive from '../../../assets/features/icons/powerActive.png'
-import sprinkler from '../../../assets/features/icons/sprinkler.png'
-import sprinklerActive from '../../../assets/features/icons/sprinklerActive.png'
-import ridgeHeight from '../../../assets/features/icons/ridge.png'
-import ridgeHeightActive from '../../../assets/features/icons/ridgeActive.png'
-import evCharging from '../../../assets/features/icons/ev.png';
-import evChargingActive from '../../../assets/features/icons/evActive.png';
-import carParking from '../../../assets/features/icons/parking.png'
-import carParkingActive from '../../../assets/features/icons/parkingActive.png'
+const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/features/icons/"
 
 export const menuConstants = {
     menuItems: [
         {
             id: "flythrough",
             label: "Flythrough",
-            icon: flythrough,
-            iconActive: flythroughActive,
+            icon: baseURL + "flythrough.png",
+            iconActive: baseURL + "flythroughActive.png",
         },
         {
             id: "loadingDocks",
             label: "Loading Docks",
-            icon: loadingDocks,
-            iconActive: loadingDocksActive,
+            icon: baseURL + "loadingDocks.png",
+            iconActive: baseURL + "loadingDocksActive.png",
         },
         {
             id: "rollerDoors",
             label: "Roller Doors",
-            icon: rollerDoors,
-            iconActive: rollerDoorsActive,
+            icon: baseURL + "rollerDoors.png",
+            iconActive: baseURL + "rollerDoorsActive.png",
         },
         {
             id: "superCanopy",
             label: "Super Canopy",
-            icon: superCanopy,
-            iconActive: superCanopyActive,
+            icon: baseURL + "superCanopy.png",
+            iconActive: baseURL + "superCanopyActive.png",
         },
         {
             id: "warehouses",
             label: "Warehouses",
-            icon: warehouses,
-            iconActive: warehousesActive,
+            icon: baseURL + "warehouses.png",
+            iconActive: baseURL + "warehousesActive.png",
         },
         {
             id: "solarPanels",
             label: "Solar Panels",
-            icon: solarPanels,
-            iconActive: solarPanelsActive,
+            icon: baseURL + "solar.png",
+            iconActive: baseURL + "solarActive.png",
         },
         {
             id: "power",
             label: "Power",
-            icon: power,
-            iconActive: powerActive,
+            icon: baseURL + "power.png",
+            iconActive: baseURL + "powerActive.png",
         },
         {
             id: "sprinkler",
             label: "Sprinkler",
-            icon: sprinkler,
-            iconActive: sprinklerActive,
+            icon: baseURL + "sprinkler.png",
+            iconActive: baseURL + "sprinklerActive.png",
         },
-        // {
-        //     id: "ridgeHeight",
-        //     label: "Ridge Height",
-        //     icon: ridgeHeight,
-        //     iconActive: ridgeHeightActive,
-        // },
         {
             id: "evCharging",
             label: "EV Charging",
-            icon: evCharging,
-            iconActive: evChargingActive,
+            icon: baseURL + "ev.png",
+            iconActive: baseURL + "evActive.png",
         },
         {
             id: "carParking",
             label: "Car Parking",
-            icon: carParking,
-            iconActive: carParkingActive,
+            icon: baseURL + "parking.png",
+            iconActive: baseURL + "parkingActive.png",
         },
-
-
-
-
-
-
     ],
 
 }
