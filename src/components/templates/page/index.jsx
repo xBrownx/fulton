@@ -2,7 +2,8 @@ import { PageLogo, StyledPage } from './styles'
 import { motion } from 'framer-motion';
 import { useMobile } from "../../../hooks/useMobile.jsx";
 import { Image } from "../../atoms/index.jsx";
-import replikaLogo from '../../../assets/Replika.png'
+
+const logo = 'https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/replika-logo.png';
 
 function Page(props) {
     const isMobile = useMobile();
@@ -48,7 +49,7 @@ function Page(props) {
                                 <Image
                                     $width={77.62*1.5}
                                     $height={32 * 1.5}
-                                    src={replikaLogo}
+                                    src={logo}
                                 />
                         </PageLogo>
                     }

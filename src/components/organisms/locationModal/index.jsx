@@ -1,16 +1,13 @@
 import React, { memo, useState } from 'react'
 import { Background, Container, IconWrapper, StyledVideo } from './styles';
-import Exit from "../../../assets/exit.svg";
+const Exit = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/icon-exit.svg";
 
 
 function LocationModal(props) {
 
     return (
         <>
-
             <Container>
-
-
                 <IconWrapper>
                     <Exit onClick={() => props.closemodal()} />
                 </IconWrapper>

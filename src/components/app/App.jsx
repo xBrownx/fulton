@@ -12,11 +12,10 @@ import { AnimatePresence } from "framer-motion";
 import Map from "../pages/map/index.jsx";
 import { useMobile } from "../../hooks/useMobile.jsx";
 import AssetOverview from "../organisms/assetOverview/index.jsx";
-import mobileMap from '../../assets/Location-Mobile.png'
-import mobileMapLegend from '../../assets/mobileMapLegend.png'
 import { Image } from "../atoms/index.jsx";
 import Footer from "../organisms/footer/index.jsx";
 import { useEffect, useRef } from "react";
+import { constants as CONST } from './constants'
 
 
 function App() {
@@ -46,7 +45,6 @@ function App() {
 
     return (
         <>
-            {/*{location.pathname !== "/map" && <Header scrollTo={scrollTo}/>}*/}
             <Header scrollTo={scrollTo}/>
             {
                 isMobile ?
@@ -55,8 +53,8 @@ function App() {
                         <Overview $pageRef={pageRefs.overview} />
                         <AssetOverview />
                         <Location $pageRef={pageRefs.location} />
-                        <Image src={mobileMap} />
-                        <Image src={mobileMapLegend} />
+                        <Image src={CONST.assets.mobile.map.src} />
+                        <Image src={CONST.assets.mobile.mapLegend.src} />
                         <FeaturesMobile $pageRef={pageRefs.features} />
                         <Agency />
                         <Contact $pageRef={pageRefs.contact} />

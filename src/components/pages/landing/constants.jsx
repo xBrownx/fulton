@@ -9,6 +9,9 @@ export const landing = {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/agency/centuria-logo-light.png",
             width: 224,
             height: 80,
+        },
+        arrowIcon: {
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/landing/icon-down-arrow.png",
         }
     }
 }

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Column, Heading, Image } from "../../atoms/index.jsx";
-import logo from '../../../assets/Replika.png'
+const logo = 'https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/replika-logo.png';
 
 function Footer() {
     return (

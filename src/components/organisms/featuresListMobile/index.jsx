@@ -1,5 +1,5 @@
-import { memo, useState } from 'react';
-import { menuConstants as CONST } from "./constants";
+import { memo } from 'react';
+import { menuConstants as CONST } from "../featuresList/constants";
 import { MobileContainer, MobileLi, MobileUl } from "./styles";
 import { Heading, Image, Row } from "../../atoms";
 

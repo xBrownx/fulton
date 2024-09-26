@@ -2,15 +2,15 @@ import { memo, useState } from 'react';
 import { Link } from "react-router-dom";
 import { header as CONST } from './constants'
 import { Container, IconWrapper, MobileMenuContainer, MobileUl, Wrapper } from './styles';
-import { Column, Heading, Row } from '../../atoms';
+import { Column, Heading, Image, Row } from '../../atoms';
 import { NavLinks } from "../../molecules";
 import { useMobile } from "../../../hooks/useMobile.jsx";
-import Exit from '../../../assets/exit.svg'
 
 function Header(props) {
     const isMobile = useMobile();
     const [isShowMenu, setIsShowMenu] = useState(false);
     const MenuIcon = CONST.assets.menuIcon.src;
+    const ExitIcon = CONST.assets.exitIcon.src;
 
     const scrollTo = (page) => {
         setIsShowMenu(false);
@@ -42,7 +42,7 @@ function Header(props) {
                         </Link>
                         <NavLinks linkList={CONST.links} />
                         <IconWrapper>
-                            <MenuIcon onClick={() => setIsShowMenu(true)} />
+                            <Image src={MenuIcon} onClick={() => setIsShowMenu(true)} />
                         </IconWrapper>
                     </Row>
                 </Wrapper>
@@ -57,7 +57,7 @@ function Header(props) {
                         $justifyEnd
                     >
 
-                        <Exit
+                        <Image src={ExitIcon}
                             style={{marginRight: "16px"}}
                             onClick={() => setIsShowMenu(false)}
                         />

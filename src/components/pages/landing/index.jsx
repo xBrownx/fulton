@@ -5,7 +5,6 @@ import { ArrowWrapper } from "./styles.jsx";
 import { Column, Heading, Image } from "../../atoms";
 import { BackgroundVideo } from "../../molecules/";
 import { Page } from '../../templates';
-import arrow from '../../../assets/downArrow.png'
 
 function Landing(props) {
     const isMobile = useMobile();
@@ -50,7 +49,7 @@ function Landing(props) {
 
             </Column>
             <ArrowWrapper>
-                <Image src={arrow} style={{width: "32px", height: "32px", marginInline: "auto"}}/>
+                <Image src={CONST.assets.arrowIcon.src} style={{width: "32px", height: "32px", marginInline: "auto"}}/>
             </ArrowWrapper>
 
         </Page>

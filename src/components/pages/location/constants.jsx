@@ -1,7 +1,5 @@
 const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-"
 
-import nearbyIcon from '../../../assets/features/icons/nearbyAssetsActive.png';
-import mapIcon from '../../../assets/location/mapIcon.png';
 export const location = {
     titleTxt: "The Location",
     paragraphTxt: [
@@ -18,8 +16,8 @@ export const location = {
         nearbyAssets: {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-nearbyassets.mp4"
         },
-        mapIcon: mapIcon,
-        nearbyIcon: nearbyIcon
+        mapIcon: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-map.png",
+        nearbyIcon: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-nearby-assets.png",
 
     }
 }

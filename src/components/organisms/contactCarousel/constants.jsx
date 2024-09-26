@@ -1,4 +1,4 @@
-const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/"
+const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/contact/"
 
 export const carouselConst = {
     images: [

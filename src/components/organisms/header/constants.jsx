@@ -1,5 +1,4 @@
-import replikaLogo from '../../../assets/Replika.png'
-import MenuIcon from '../../../assets/MenuIcon.svg';
+
 export const header = {
     titleTxt: "30 Fulton Drive",
     links: [
@@ -36,12 +35,15 @@ export const header = {
     ],
     assets: {
         replikaLogo: {
-            src: replikaLogo,
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/replika-logo.png",
             width: 77.62 * 1.5,
             height: 32 * 1.5
         },
         menuIcon: {
-            src: MenuIcon,
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/icon-menu.svg",
+        },
+        exitIcon: {
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/icon-exit.svg",
         }
     }
 }

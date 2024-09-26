@@ -1,5 +1,3 @@
-import mobileAssets from '../../../assets/mobileAssets.png'
-
 export const overview = {
     titleTxt: "Asset Overview",
     subtitleTxt: "Power, Position and Proven",
@@ -13,7 +11,7 @@ export const overview = {
             src: 'https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/overview-background.mp4'
         },
         backgroundImgMobile: {
-            src: mobileAssets
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/overview/mobile-background.png"
         }
     }
 }
