@@ -1,15 +1,16 @@
 import { memo, useState } from 'react';
-import { Link } from "react-router-dom";
-import { header as CONST } from './constants'
-import { Container, IconWrapper, MobileMenuContainer, MobileUl, Wrapper } from './styles';
-import { Column, Heading, Row } from '../../atoms';
-import { NavLinks } from "../../molecules";
+import { Link, NavLink } from "react-router-dom";
+import { header as CONST } from './constants.jsx'
+import { Container, IconWrapper, ImageWrapper, MobileMenuContainer, MobileUl, Wrapper } from './styles.jsx';
+import { Column, Heading, Image, Row } from '../../../components/atoms/index.jsx';
+import { NavLinks } from "../../../components/molecules/index.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";
 import Exit from '../../../assets/exit.svg'
 
 function Header(props) {
     const isMobile = useMobile();
     const [isShowMenu, setIsShowMenu] = useState(false);
+    const replikaLogo = CONST.assets.replikaLogo
     const MenuIcon = CONST.assets.menuIcon.src;
 
     const scrollTo = (page) => {

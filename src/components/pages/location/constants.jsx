@@ -1,4 +1,5 @@
-const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/"
+const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-"
+
 import nearbyIcon from '../../../assets/features/icons/nearbyAssetsActive.png';
 import mapIcon from '../../../assets/location/mapIcon.png';
 export const location = {
@@ -15,7 +16,7 @@ export const location = {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/Fulton+location+map.png"
         },
         nearbyAssets: {
-            src: baseURL + "240924_Area_s Clip.mp4"
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-nearbyassets.mp4"
         },
         mapIcon: mapIcon,
         nearbyIcon: nearbyIcon

@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { StyledUl, StyledLi } from './styles';
 import { Link as StyledLink } from '../../atoms';
 import { Link, useLocation } from "react-router-dom";
@@ -13,7 +13,7 @@ function NavLinks(props) {
                 return (
                     <StyledLi key={link.id}>
                         <Link to={link.path} style={{ textDecoration: 'none' }}>
-                            <StyledLink $isActive={location.pathname === `/${link.path}`}>
+                            <StyledLink $isActive={location.pathname === `${link.path}`}>
                                 {link.label}
                             </StyledLink>
                         </Link>

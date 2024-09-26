@@ -16,7 +16,7 @@ import mobileMap from '../../assets/Location-Mobile.png'
 import mobileMapLegend from '../../assets/mobileMapLegend.png'
 import { Image } from "../atoms/index.jsx";
 import Footer from "../organisms/footer/index.jsx";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 
 function App() {
@@ -37,9 +37,17 @@ function App() {
             })
         }, 100);
     }
+
+    console.log(location.pathname);
+
+    useEffect(() => {
+
+    });
+
     return (
         <>
-            {location.pathname !== "/map" && <Header scrollTo={scrollTo}/>}
+            {/*{location.pathname !== "/map" && <Header scrollTo={scrollTo}/>}*/}
+            <Header scrollTo={scrollTo}/>
             {
                 isMobile ?
                     <>

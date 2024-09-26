@@ -1,42 +1,37 @@
-
-
-const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/"
+const baseURL = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/features-"
 
 export const designConst = {
     assets: {
         videos: {
             flythrough: {
-                src: baseURL + "Flythrough.mp4"
+                src: baseURL + "flythrough.mp4"
             },
             loadingDocks: {
-                src: baseURL + "240924_RecessedDocks.mp4"
+                src: baseURL + "loadingdocks.mp4"
             },
             rollerDoors: {
-                src: baseURL + "240924_RollerDoors.mp4"
+                src: baseURL + "rollerdoors.mp4"
             },
             superCanopy: {
-                src: baseURL + "240924_SuperCanopy.mp4"
+                src: baseURL + "supercanopy.mp4"
             },
             warehouses: {
-                src: baseURL + "Warehouses.mp4"
+                src: baseURL + "warehouses.mp4"
             },
             solarPanels: {
-                src: baseURL + "240924_Solar Roof Clip.mp4"
+                src: baseURL + "solar.mp4"
             },
             power: {
-                src: baseURL + "Power.mp4"
+                src: baseURL + "power.mp4"
             },
             sprinkler: {
-                src: baseURL + "Sprinkler.mp4"
+                src: baseURL + "sprinkler.mp4"
             },
-            // ridgeHeight: {
-            //
-            // },
             evCharging: {
-                src: baseURL + "240924_EV.mp4"
+                src: baseURL + "ev.mp4"
             },
             carParking: {
-                src: baseURL + "240924_Carparking.mp4"
+                src: baseURL + "carpark.mp4"
             },
 
 

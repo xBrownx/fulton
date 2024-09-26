@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React from 'react';
 import { location as CONST } from './constants';
 import { Page } from '../../templates';
 import { Column, Image, } from "../../atoms/index.jsx";
@@ -9,7 +9,7 @@ import { LocationModal } from "../../organisms/index.jsx";
 
 function Location(props) {
     const isMobile = useMobile();
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = React.useState(false);
     return (
         <Page
             id={"location"}
@@ -19,8 +19,8 @@ function Location(props) {
         >
             {showModal &&
                 <LocationModal
-                    closeModal={() => setShowModal(false)}
-                    videoSrc={CONST.assets.nearbyAssets.src}
+                    closemodal={() => setShowModal(false)}
+                    videosrc={CONST.assets.nearbyAssets.src}
                 />
             }
             {!isMobile &&
@@ -60,9 +60,7 @@ function Location(props) {
                             })}
                             {!isMobile &&
                                 <Column $paddingTop={16} $gap={32}>
-                                    <CustomLink
-                                        href="/#/map" target="_blank"
-                                    >
+                                    <CustomLink href="/#/map">
                                         <Image $width={32} $height={32} src={CONST.assets.mapIcon} />
                                         {CONST.footerTxt[0]}
                                     </CustomLink>
@@ -83,4 +81,4 @@ function Location(props) {
 
 }
 
-export default memo(Location);
+export default React.memo(Location);

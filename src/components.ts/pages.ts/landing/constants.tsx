@@ -5,7 +5,7 @@ export const landing = {
     titleTxtMobile: "30 Fulton Drive",
     subtitleTxtMobile: "Derrimut, 3026 VIC",
     assets: {
-        backgroundVideo: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/landing-background.mp4",
+        backgroundVideo: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/30FultonDrive_Reel.mp4",
         logo: {
             src: logo,
             width: 224,
