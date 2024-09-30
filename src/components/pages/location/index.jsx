@@ -3,13 +3,24 @@ import { location as CONST } from './constants';
 import { Page } from '../../templates';
 import { Column, Image, } from "../../atoms/index.jsx";
 import { PageParagraph, PageTitle } from "../../molecules/index.jsx";
-import { BackgroundContainer, Container, CustomImage, CustomLink } from "./styles.jsx";
+import { BackgroundContainer, Container, CustomImage, CustomLink, CustomWrapper } from "./styles.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";
 import { LocationModal } from "../../organisms/index.jsx";
 
 function Location(props) {
     const isMobile = useMobile();
+    const [isLiveMap, setIsLiveMap] = React.useState(false);
     const [showModal, setShowModal] = React.useState(false);
+
+    const showMap = () => {
+        setIsLiveMap(true);
+        setShowModal(true);
+    }
+
+    const showNearbyAssets = () => {
+        setIsLiveMap(false);
+        setShowModal(true);
+    }
     return (
         <Page
             id={"location"}
@@ -21,12 +32,13 @@ function Location(props) {
                 <LocationModal
                     closemodal={() => setShowModal(false)}
                     videosrc={CONST.assets.nearbyAssets.src}
+                    isLiveMap={isLiveMap}
                 />
             }
             {!isMobile &&
-                <BackgroundContainer>
+                <BackgroundContainer >
                     <CustomImage src={CONST.assets.backgroundImg.src} {...CONST.assets.backgroundImg} />
-                </BackgroundContainer>
+                </BackgroundContainer >
             }
             <Column
                 $height={706}
@@ -35,7 +47,7 @@ function Location(props) {
                 $fitContent
                 $gap={isMobile ? 32 : 0}
             >
-                <Container>
+                <Container >
                     <Column
                         $paddingTop={isMobile ? 0 : 32}
                         $paddingLeft={isMobile ? 16 : 32}
@@ -43,39 +55,57 @@ function Location(props) {
                         $width={512}
                         $gap={isMobile ? 16 : 32}
                     >
-                        <PageTitle $colourDark>
+                        <PageTitle $colourDark >
                             {CONST.titleTxt}
-                        </PageTitle>
-                        <Column $gap={16}>
-                            {CONST.paragraphTxt.map(item => {
-                                return (
-                                    <PageParagraph
-                                        key={item}
-                                        $colourDark
-                                        $opacity={0.6}
-                                    >
-                                        {item}
-                                    </PageParagraph>
-                                );
-                            })}
-                            {!isMobile &&
-                                <Column $paddingTop={16} $gap={32}>
-                                    <CustomLink href="/#/map">
+                        </PageTitle >
+                        <Column $gap={32} >
+                            <CustomWrapper >
+                                <Column $gap={16} >
+                                    {CONST.paragraphTxt[0].map(item => {
+                                        return (
+                                            <PageParagraph
+                                                key={item}
+                                                $colourDark
+                                                $opacity={0.6}
+                                            >
+                                                {item}
+                                            </PageParagraph >
+                                        );
+                                    })}
+                                    <CustomLink onClick={showMap} >
                                         <Image $width={32} $height={32} src={CONST.assets.mapIcon.src} />
                                         {CONST.footerTxt[0]}
-                                    </CustomLink>
-                                    <CustomLink onClick={() => setShowModal(true)}>
-                                        <Image $width={32} $height={32} src={CONST.assets.nearbyIcon.src} />
-                                        {CONST.footerTxt[1]}
-                                    </CustomLink>
-                                </Column>
-                            }
-                        </Column>
-                    </Column>
-                </Container>
+                                    </CustomLink >
+                                </Column >
+                            </CustomWrapper >
+                            <CustomWrapper >
+                                <Column $gap={16} >
+                                    {CONST.paragraphTxt[1].map(item => {
+                                        return (
+                                            <PageParagraph
+                                                key={item}
+                                                $colourDark
+                                                $opacity={0.6}
+                                            >
+                                                {item}
+                                            </PageParagraph >
+                                        );
+                                    })}
+                                    <Column $paddingTop={16} $gap={32} >
+                                        <CustomLink onClick={showNearbyAssets} >
+                                            <Image $width={32} $height={32} src={CONST.assets.nearbyIcon.src} />
+                                            {CONST.footerTxt[1]}
+                                        </CustomLink >
+                                    </Column >
 
-            </Column>
-        </Page>
+                                </Column >
+                            </CustomWrapper >
+                        </Column >
+                    </Column >
+                </Container >
+
+            </Column >
+        </Page >
     )
         ;
 

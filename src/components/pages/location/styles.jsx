@@ -67,3 +67,16 @@ export const CustomLink = styled.a`
     `}
 `
 
+export const CustomWrapper = styled.div`
+    border-left: 2px solid ${S.colour.primary};
+    padding-left: ${S.width(16)}vw;
+    width: ${S.width(512)}vw;
+    
+    ${Media.md`
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 1px;
+        box-sizing: border-box;
+    `}
+`
+
