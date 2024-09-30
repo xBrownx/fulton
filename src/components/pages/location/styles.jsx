@@ -8,11 +8,12 @@ export const Container = styled.div`
     height: 100%;
     background: white;
     width: ${S.width(584)}vw;
+    margin-bottom: ${S.height(96)}vh;
     clip-path: polygon(
             0% 0%, 
             100% 0%, 
-            100% calc(100% - 8vw), 
-            calc(100% - 15.701vw) 100%, 
+            100% calc(100% - 6.114vw), 
+            calc(100% - 12vw) 100%, 
             0% 100%
     );
 

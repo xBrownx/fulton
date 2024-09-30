@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import { memo } from 'react'
 import { Image } from '../../atoms'
 import { Background, Container, IconWrapper, StyledVideo } from './styles';
 

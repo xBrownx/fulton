@@ -43,7 +43,7 @@ function Location(props) {
             <Column
                 $height={706}
                 $paddingTop={isMobile ? 64 : 123}
-                $paddingBottom={isMobile ? 32 : 0}
+                $paddingBottom={isMobile ? 32 : 1000}
                 $fitContent
                 $gap={isMobile ? 32 : 0}
             >
