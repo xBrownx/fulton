@@ -554,16 +554,19 @@ Error generating stack: `+s.message+`
     
     ${B.md`
         width: ${e=>e.$width}px;
-        height: auto;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
     `}
     
     ${e=>e.$bgWhite&&E`
-        background-color: white;
+        background: linear-gradient(#FFF 50%, #000);
     `}
 `,FS=R.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
     ${B.md`
         
     `}
@@ -1409,7 +1412,7 @@ Derrimut, 3026 VIC`,titleTxtMobile:"30 Fulton Drive",subtitleTxtMobile:"Derrimut
     }
 
     ${B.md`
-        font-size: 24px;
+        font-size: 16px;
         line-height: 24px;
         gap: 8px;
     `}
@@ -1424,7 +1427,7 @@ Derrimut, 3026 VIC`,titleTxtMobile:"30 Fulton Drive",subtitleTxtMobile:"Derrimut
         padding-right: 1px;
         box-sizing: border-box;
     `}
-`;function Gp(e){const t=Ct();return w.jsxs(Vn,{id:"overview",$pageRef:e.$pageRef,$bgPrimary:!t,$fullScreen:!t,$mobile:t,children:[!t&&w.jsx(ud,{src:fn.assets.backgroundVideo.src}),w.jsxs(Je,{$spaceBetween:!0,$paddingTop:t?64:123,$paddingBottom:t?64:82,$paddingRight:t?16:32,$alignStart:!0,$fitHeight:!0,children:[w.jsx(dM,{children:w.jsx(Q,{$paddingTop:t?0:70,$paddingLeft:t?16:32,$width:545,$gap:t?16:40,$fillParent:!0,children:w.jsxs(Q,{$gap:16,children:[w.jsx(xs,{$colourLight:!0,children:fn.titleTxt}),w.jsx($T,{$colourLight:!0,children:fn.subtitleTxt}),w.jsx(fM,{children:w.jsxs(Q,{$gap:16,children:[w.jsx(Q,{$gap:16,children:fn.paragraphTxt.map((n,i)=>w.jsx(Zo,{$colourLight:!0,$opacity:.8,children:n},i))}),w.jsxs(sc,{href:fn.assets.im.src,target:"_blank",children:[w.jsx(xe,{$width:32,$height:32,src:fn.assets.downloadIcon.src}),fn.linkTxt]})]})})]})})}),!t&&w.jsx(h0,{})]})]})}const Et={titleTxt:"The Location",paragraphTxt:[["Positioned on the western corner of two B-double approved roads, Fulton Drive and Briggs Drive. The facility provides immediate access to major arterials such as the Western Highway, Western Ring Road and the West Gate Freeway.","Derrimut’s central location ensures occupiers are within close proximity to the Port of Melbourne, Melbourne Airport, as well as the Melbourne CBD. It has excellent surrounding road infrastructure that caters to all forms of vehicle transport, including heavy vehicles."],["Melbourne’s west is home to some of the largest manufacturers in the world, including OI Glass, VISY, Opal Packaging, and Encore Tissues. More specifically, Derrimut accommodates companies such as Cimpress, Downer Group, and ARA Group."]],footerTxt:["VIEW LIVE MAP","VIEW NEARBY ASSETS"],assets:{backgroundImg:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/desktop-map.png"},nearbyAssets:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-nearbyassets.mp4"},mapIcon:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-map.svg"},nearbyIcon:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-nearby-assets-active.png"}}},gM=R.div`
+`;function Gp(e){const t=Ct();return w.jsxs(Vn,{id:"overview",$pageRef:e.$pageRef,$bgPrimary:!t,$fullScreen:!t,$mobile:t,children:[!t&&w.jsx(ud,{src:fn.assets.backgroundVideo.src}),w.jsxs(Je,{$spaceBetween:!0,$paddingTop:t?64:123,$paddingBottom:t?64:82,$paddingRight:t?16:32,$alignStart:!0,$fitHeight:!0,children:[w.jsx(dM,{children:w.jsx(Q,{$paddingTop:t?0:70,$paddingLeft:t?16:32,$width:545,$gap:t?16:40,$fillParent:!0,children:w.jsxs(Q,{$gap:16,children:[w.jsx(xs,{$colourLight:!0,children:fn.titleTxt}),w.jsx($T,{$colourLight:!0,children:fn.subtitleTxt}),w.jsx(fM,{children:w.jsxs(Q,{$gap:16,children:[w.jsx(Q,{$gap:16,children:fn.paragraphTxt.map((n,i)=>w.jsx(Zo,{$colourLight:!0,$opacity:.8,children:n},i))}),w.jsxs(sc,{href:fn.assets.im.src,target:"_blank",children:[w.jsx(xe,{$width:32,$height:32,src:fn.assets.downloadIcon.src}),fn.linkTxt]})]})})]})})}),!t&&w.jsx(h0,{})]})]})}const Et={titleTxt:"The Location",paragraphTxt:[["Positioned on the western corner of two B-double approved roads, Fulton Drive and Briggs Drive. The facility provides immediate access to major arterials such as the Western Highway, Western Ring Road and the West Gate Freeway.","Derrimut’s central location ensures occupiers are within close proximity to the Port of Melbourne, Melbourne Airport, as well as the Melbourne CBD. It has excellent surrounding road infrastructure that caters to all forms of vehicle transport, including heavy vehicles."],["Melbourne’s west is home to some of the largest manufacturers in the world, including OI Glass, VISY, Opal Packaging, and Encore Tissues. More specifically, Derrimut accommodates companies such as Cimpress, Downer Group, and ARA Group."]],footerTxt:["VIEW LIVE MAP","NEARBY ASSETS"],assets:{backgroundImg:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/desktop-map.png"},nearbyAssets:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/videos/production/location-nearbyassets.mp4"},mapIcon:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-map.svg"},nearbyIcon:{src:"https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/icon-nearby-assets-active.png"}}},gM=R.div`
     z-index: 100;
     width: ${T.width(1120)}vw;
     height: ${T.height(630)}vh;
