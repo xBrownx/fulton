@@ -62,7 +62,7 @@ export const CustomLink = styled.a`
     }
 
     ${Media.md`
-        font-size: 24px;
+        font-size: 16px;
         line-height: 24px;
         gap: 8px;
     `}

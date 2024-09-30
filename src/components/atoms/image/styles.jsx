@@ -17,11 +17,13 @@ export const Container = styled.div`
     
     ${Media.md`
         width: ${props => props.$width}px;
-        height: auto;
+        height: fit-content;
+        margin: 0;
+        padding: 0;
     `}
     
     ${props => props.$bgWhite && css`
-        background-color: white;
+        background: linear-gradient(#FFF 50%, #000);
     `}
 `
 
@@ -29,6 +31,7 @@ export const StyledImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
     ${Media.md`
         
     `}

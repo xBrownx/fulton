@@ -11,7 +11,7 @@ export const location = {
             "Melbourne’s west is home to some of the largest manufacturers in the world, including OI Glass, VISY, Opal Packaging, and Encore Tissues. More specifically, Derrimut accommodates companies such as Cimpress, Downer Group, and ARA Group."
         ]
     ],
-    footerTxt: ["VIEW LIVE MAP", "VIEW NEARBY ASSETS"],
+    footerTxt: ["VIEW LIVE MAP", "NEARBY ASSETS"],
     assets: {
         backgroundImg: {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/location/desktop-map.png"
