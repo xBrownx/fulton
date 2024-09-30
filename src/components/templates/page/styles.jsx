@@ -90,6 +90,7 @@ export const StyledPage = styled.section`
 `
 
 export const PageLogo = styled.div`
+    z-index: 100;
     position: absolute;
     bottom: 0;
     right: 0;
