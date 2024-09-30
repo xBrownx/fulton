@@ -4,6 +4,7 @@ import { Style as S } from '../../util'
 export const Container = styled.div`
     z-index: 10;
     width: ${S.width(1120)}vw;
+    height: ${S.height(630)}vh;
     position: fixed;
     top: 50%;
     left: 50%;

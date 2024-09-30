@@ -6,7 +6,6 @@ const exit = "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/icon-
 
 
 function LocationModal(props) {
-
     return (
         <>
             <Container >
@@ -24,7 +23,7 @@ function LocationModal(props) {
                 }
 
             </Container >
-            <Background onClick={props.closeModal} />
+            <Background onClick={() => props.closemodal()} />
         </>
     );
 }
