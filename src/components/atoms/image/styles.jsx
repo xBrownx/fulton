@@ -19,6 +19,10 @@ export const Container = styled.div`
         width: ${props => props.$width}px;
         height: auto;
     `}
+    
+    ${props => props.$bgWhite && css`
+        background-color: white;
+    `}
 `
 
 export const StyledImage = styled.img`

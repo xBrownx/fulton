@@ -6,21 +6,14 @@ import { PageParagraph, PageTitle } from "../../molecules/index.jsx";
 import { BackgroundContainer, Container, CustomImage, CustomLink, CustomWrapper } from "./styles.jsx";
 import { useMobile } from "../../../hooks/useMobile.jsx";
 import { LocationModal } from "../../organisms/index.jsx";
+import LocationMapModal from "../../organisms/locationMapModal/index.jsx";
 
 function Location(props) {
     const isMobile = useMobile();
-    const [isLiveMap, setIsLiveMap] = React.useState(false);
-    const [showModal, setShowModal] = React.useState(false);
 
-    const showMap = () => {
-        setIsLiveMap(true);
-        setShowModal(true);
-    }
+    const [showNearbyAssetsModal, setShowNearbyAssetsModal] = React.useState(false);
+    const [showMapModal, setShowMapModal] = React.useState(false);
 
-    const showNearbyAssets = () => {
-        setIsLiveMap(false);
-        setShowModal(true);
-    }
     return (
         <Page
             id={"location"}
@@ -28,11 +21,16 @@ function Location(props) {
             $fullScreen={!isMobile}
             $pageRef={props.$pageRef}
         >
-            {showModal &&
+            {showNearbyAssetsModal &&
                 <LocationModal
-                    closemodal={() => setShowModal(false)}
+                    closemodal={() => setShowNearbyAssetsModal(false)}
                     videosrc={CONST.assets.nearbyAssets.src}
-                    isLiveMap={isLiveMap}
+                />
+            }
+
+            {showMapModal &&
+                <LocationMapModal
+                    closemodal={() => setShowMapModal(false)}
                 />
             }
             {!isMobile &&
@@ -72,7 +70,7 @@ function Location(props) {
                                             </PageParagraph >
                                         );
                                     })}
-                                    <CustomLink onClick={showMap} >
+                                    <CustomLink onClick={() => setShowMapModal(true)} >
                                         <Image $width={32} $height={32} src={CONST.assets.mapIcon.src} />
                                         {CONST.footerTxt[0]}
                                     </CustomLink >
@@ -92,7 +90,7 @@ function Location(props) {
                                         );
                                     })}
                                     <Column $paddingTop={16} $gap={32} >
-                                        <CustomLink onClick={showNearbyAssets} >
+                                        <CustomLink onClick={() => setShowNearbyAssetsModal(true)} >
                                             <Image $width={32} $height={32} src={CONST.assets.nearbyIcon.src} />
                                             {CONST.footerTxt[1]}
                                         </CustomLink >
@@ -103,7 +101,6 @@ function Location(props) {
                         </Column >
                     </Column >
                 </Container >
-
             </Column >
         </Page >
     )

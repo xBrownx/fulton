@@ -54,7 +54,7 @@ function Header(props) {
                         $justifyEnd
                     >
 
-                        <Image src={ExitIcon}
+                        <Image src={ExitIcon} $width={32}
                             style={{marginRight: "16px"}}
                             onClick={() => setIsShowMenu(false)}
                         />

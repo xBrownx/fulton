@@ -38,7 +38,14 @@ export const CarouselContainer = styled.div`
     
     ${Media.md`
         width: 100%;
-        height: 259px;
-
+        height: fit-content;
+        clip-path: polygon(
+                0% 0%, 
+                100% 0%, 
+                100% 100%, 
+                calc(0% + 50px) 100%, 
+                0% calc(100% - 25.476px),
+                0% 0%
+        );
     `}
 `

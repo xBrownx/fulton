@@ -53,7 +53,7 @@ function App() {
                         <Overview $pageRef={pageRefs.overview} />
                         <AssetOverview />
                         <Location $pageRef={pageRefs.location} />
-                        <Image src={CONST.assets.mobile.map.src} />
+                        <Image $bgWhite src={CONST.assets.mobile.map.src} />
                         <Image src={CONST.assets.mobile.mapLegend.src} />
                         <FeaturesMobile $pageRef={pageRefs.features} />
                         <Agency />

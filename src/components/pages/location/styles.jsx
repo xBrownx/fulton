@@ -20,7 +20,7 @@ export const Container = styled.div`
     ${Media.md`
         width: 100%;
         clip-path: unset;
-        
+        margin: 0;
     `}
 `
 
