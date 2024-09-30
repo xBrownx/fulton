@@ -66,7 +66,7 @@ function Overview(props) {
                                         )
                                     })}
                                 </Column>
-                                <CustomLink href="/#/map">
+                                <CustomLink href={CONST.assets.im.src} target={"_blank"}>
                                     <Image $width={32} $height={32} src={CONST.assets.downloadIcon.src} />
                                     {CONST.linkTxt}
                                 </CustomLink>

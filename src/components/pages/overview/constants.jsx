@@ -16,6 +16,9 @@ export const overview = {
         },
         downloadIcon: {
             src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/images/overview/icon-download.svg"
+        },
+        im: {
+            src: "https://fulton-assets.s3.ap-southeast-2.amazonaws.com/pdf/30+Fulton+Drive_IM_v20.pdf",
         }
     }
 }
